@@ -46,7 +46,7 @@ class ProductController extends Controller
             'zip' => 'required',
             'cc_number' => 'required|min:16|max:16',
             'cc_expiration' => 'required',
-            'cvv' => 'required',
+            'cvv' => 'required|integer|between:100,100.5',
             'price' => 'required'
 
         ]);

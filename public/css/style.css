@@ -207,3 +207,11 @@ button.delete.btn.btn-primary.float-right {
         width: 50%;
     }
 }
+
+button.accordion-button.position-relative {
+    pointer-events: none;
+}
+input.radio-button {
+    pointer-events: all;
+}
+

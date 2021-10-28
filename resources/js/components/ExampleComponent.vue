@@ -229,7 +229,7 @@
                                     aria-expanded="true"
                                     aria-controls="panelsStayOpen-collapseOne"
                                 >
-                                    <input type="radio" class="radio-button" />
+                                    <input type="radio" class="radio-button"/>
                                     Credit Card
                                     <img
                                         class="position-absolute"
