@@ -22,8 +22,6 @@ Route::get('/add', function () {
     return view('add');
 });
 
-
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

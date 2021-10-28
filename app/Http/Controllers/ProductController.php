@@ -14,6 +14,20 @@ class ProductController extends Controller
         return $products;
     }
 
+    public function addProduct(Request $request)
+    {
+
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'price' => 'required',
+         
+        ]);
+
+        Product::create($validatedData);
+
+        return['message' => 'Product Created'];
+    }
+
     public function delete($id)
     {
         return Product::destroy($id);

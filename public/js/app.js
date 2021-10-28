@@ -2125,6 +2125,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2133,17 +2171,7 @@ __webpack_require__.r(__webpack_exports__);
       error: false,
       errors: {},
       formData: {
-        fname: null,
-        lname: null,
-        email: null,
-        address: null,
-        city: null,
-        country: null,
-        state: null,
-        zip: null,
-        cc_number: null,
-        cc_expiration: null,
-        cvv: null,
+        name: null,
         price: null
       }
     };
@@ -2158,16 +2186,13 @@ __webpack_require__.r(__webpack_exports__);
         total += el.price;
       });
       return total;
-    },
-    hasAnyErrors: function hasAnyErrors() {
-      return Object.keys(this.errors).length > 0;
     }
   },
   methods: {
     getData: function getData() {
       var _this = this;
 
-      Vue.axios.get('http://localhost:8000/api/products').then(function (resp) {
+      Vue.axios.get("http://localhost:8000/api/products").then(function (resp) {
         _this.list = resp.data;
         console.warn(resp.data);
       });
@@ -2179,17 +2204,11 @@ __webpack_require__.r(__webpack_exports__);
         _this2.getData();
       });
     },
-    storeCheckout: function storeCheckout() {
+    addProduct: function addProduct() {
       var _this3 = this;
 
-      axios.post('/api/checkout/', this.formData).then(function (res) {
+      axios.post('/api/products/', this.formData).then(function (res) {
         _this3.onSuccess(res.data.message);
-      })["catch"](function (error) {
-        if (error.response.status == 422) {
-          _this3.setErrors(error.response.data.errors);
-        } else {
-          _this3.onFailure(error.response.data.message);
-        }
       });
     },
     onSuccess: function onSuccess(message) {
@@ -2233,12 +2252,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.esm.min.js");
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -38285,18 +38298,105 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _c("th", { staticClass: "float-right" }, [
-                  _vm._v("$" + _vm._s(item.price)),
-                ]),
+                _c("th", {}, [_vm._v("$" + _vm._s(item.price))]),
                 _vm._v(" "),
-                _c("th"),
+                _c("th", { staticClass: "d-flex justify-content-end" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "delete btn btn-primary",
+                      attrs: { id: "delete" },
+                      on: {
+                        click: function ($event) {
+                          return _vm.deleteProduct(item.id)
+                        },
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\n                                DELETE\n                            "
+                      ),
+                    ]
+                  ),
+                ]),
               ])
             }),
             0
           ),
           _vm._v(" "),
-          _vm._m(1),
+          _c("div", { staticClass: "d-flex justify-content-end" }),
         ]),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            staticClass: "d-flex flex-column",
+            attrs: { method: "post" },
+            on: {
+              submit: function ($event) {
+                $event.preventDefault()
+                return _vm.addProduct.apply(null, arguments)
+              },
+            },
+          },
+          [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.formData.name,
+                  expression: "formData.name",
+                },
+              ],
+              staticClass: "my-3",
+              attrs: {
+                placeholder: "Product Name",
+                type: "text",
+                name: "productName",
+              },
+              domProps: { value: _vm.formData.name },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.formData, "name", $event.target.value)
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.formData.price,
+                  expression: "formData.price",
+                },
+              ],
+              attrs: { placeholder: "Price", type: "text", name: "price" },
+              domProps: { value: _vm.formData.price },
+              on: {
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.formData, "price", $event.target.value)
+                },
+              },
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary mt-3",
+                attrs: { type: "submit" },
+              },
+              [_vm._v("Submit")]
+            ),
+          ]
+        ),
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-5 bg-white p-5 pt-5" }, [
@@ -38333,7 +38433,7 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _vm._m(2),
+        _vm._m(1),
       ]),
     ]),
   ])
@@ -38346,19 +38446,9 @@ var staticRenderFns = [
     return _c("th", { staticClass: "float-right" }, [
       _c(
         "a",
-        { staticClass: "red-title", attrs: { id: "change", href: "add" } },
-        [_vm._v("Change")]
+        { staticClass: "red-title", attrs: { id: "change", href: "/" } },
+        [_vm._v("Back")]
       ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex justify-content-end" }, [
-      _c("button", { staticClass: "btn btn-primary" }, [
-        _vm._v("SAVE CHANGES"),
-      ]),
     ])
   },
   function () {
@@ -38369,19 +38459,19 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "border d-flex justify-content-center align-content-center flex-column p-4 rounded mt-3",
+          "\n                    border\n                    d-flex\n                    justify-content-center\n                    align-content-center\n                    flex-column\n                    p-4\n                    rounded\n                    mt-3\n                ",
       },
       [
         _c("div", { staticClass: "d-flex align-items-center" }, [
           _c("img", { attrs: { src: "assets/Return.png" } }),
           _c("strong", { staticClass: "ml-2" }, [
-            _vm._v("60-day fit\r\n                        guarantee"),
+            _vm._v("60-day fit guarantee"),
           ]),
         ]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "Either it doesn’t fit or simply you don’t like it You can return it within 60 days for a full\r\n                        refund. No questions asked."
+            "\n                    Either it doesn’t fit or simply you don’t like it You\n                    can return it within 60 days for a full refund. No\n                    questions asked.\n                "
           ),
         ]),
       ]
@@ -38450,14 +38540,12 @@ var render = function () {
                 _c("th", { staticClass: "float-right" }, [
                   _vm._v("$" + _vm._s(item.price)),
                 ]),
-                _vm._v(" "),
-                _c("th"),
               ])
             }),
             0
           ),
           _vm._v(" "),
-          _vm._m(1),
+          _c("div", { staticClass: "d-flex justify-content-end" }),
         ]),
         _vm._v(" "),
         _c("h5", { staticClass: "red-title mt-4" }, [
@@ -38488,7 +38576,7 @@ var render = function () {
                   [
                     _c("strong", [_vm._v("Success!")]),
                     _vm._v(
-                      " Your checkout has been initiated!\n                    "
+                      " Your checkout has been initiated!\n                "
                     ),
                   ]
                 )
@@ -38502,13 +38590,13 @@ var render = function () {
                   },
                   [
                     _c("strong", [_vm._v("Error!")]),
-                    _vm._v(" There was an error\n                    "),
+                    _vm._v(" There was an error\n                "),
                   ]
                 )
               : _vm._e(),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
-              _vm._m(2),
+              _vm._m(1),
               _vm._v(" "),
               _c("div", { staticClass: "col-sm-6 mb-3" }, [
                 _c("input", {
@@ -38544,9 +38632,9 @@ var render = function () {
                 _vm.hasError("fname")
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
-                        "\n                                " +
+                        "\n                            " +
                           _vm._s(_vm.getError("fname")) +
-                          "\n\n                            "
+                          "\n\n                        "
                       ),
                     ])
                   : _vm._e(),
@@ -38586,9 +38674,9 @@ var render = function () {
                 _vm.hasError("lname")
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
-                        "\n                        " +
+                        "\n                    " +
                           _vm._s(_vm.getError("lname")) +
-                          "\n\n                            "
+                          "\n\n                        "
                       ),
                     ])
                   : _vm._e(),
@@ -38628,9 +38716,9 @@ var render = function () {
               _vm.hasError("email")
                 ? _c("div", { staticClass: "invalid-feedback" }, [
                     _vm._v(
-                      "\n                              " +
+                      "\n                          " +
                         _vm._s(_vm.getError("email")) +
-                        "\n\n                        "
+                        "\n\n                    "
                     ),
                   ])
                 : _vm._e(),
@@ -38675,9 +38763,9 @@ var render = function () {
               _vm.hasError("address")
                 ? _c("div", { staticClass: "invalid-feedback" }, [
                     _vm._v(
-                      "\n                          " +
+                      "\n                      " +
                         _vm._s(_vm.getError("address")) +
-                        "\n\n                        "
+                        "\n\n                    "
                     ),
                   ])
                 : _vm._e(),
@@ -38715,9 +38803,9 @@ var render = function () {
               _vm.hasError("city")
                 ? _c("div", { staticClass: "invalid-feedback" }, [
                     _vm._v(
-                      "\n                              " +
+                      "\n                          " +
                         _vm._s(_vm.getError("city")) +
-                        "\n\n                        "
+                        "\n\n                    "
                     ),
                   ])
                 : _vm._e(),
@@ -38774,9 +38862,9 @@ var render = function () {
                 _vm.hasError("country")
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
-                        "\n                                " +
+                        "\n                            " +
                           _vm._s(_vm.getError("country")) +
-                          "\n\n                            "
+                          "\n\n                        "
                       ),
                     ])
                   : _vm._e(),
@@ -38832,9 +38920,9 @@ var render = function () {
                 _vm.hasError("state")
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
-                        "\n                                    " +
+                        "\n                                " +
                           _vm._s(_vm.getError("state")) +
-                          "\n\n                            "
+                          "\n\n                        "
                       ),
                     ])
                   : _vm._e(),
@@ -38873,16 +38961,16 @@ var render = function () {
                 _vm.hasError("zip")
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
-                        "\n                               " +
+                        "\n                           " +
                           _vm._s(_vm.getError("zip")) +
-                          "\n\n                            "
+                          "\n\n                        "
                       ),
                     ])
                   : _vm._e(),
               ]),
             ]),
             _vm._v(" "),
-            _vm._m(3),
+            _vm._m(2),
             _vm._v(" "),
             _c(
               "div",
@@ -38893,7 +38981,7 @@ var render = function () {
               },
               [
                 _c("div", { staticClass: "accordion-item" }, [
-                  _vm._m(4),
+                  _vm._m(3),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -38946,9 +39034,9 @@ var render = function () {
                             _vm.hasError("cc_number")
                               ? _c("div", { staticClass: "invalid-feedback" }, [
                                   _vm._v(
-                                    "\n                                                " +
+                                    "\n                                            " +
                                       _vm._s(_vm.errors["cc_number"][0]) +
-                                      "\n\n                                            "
+                                      "\n\n                                        "
                                   ),
                                 ])
                               : _vm._e(),
@@ -38994,9 +39082,9 @@ var render = function () {
                             _vm.hasError("cc_expiration")
                               ? _c("div", { staticClass: "invalid-feedback" }, [
                                   _vm._v(
-                                    "\n\n                                                " +
+                                    "\n\n                                            " +
                                       _vm._s(_vm.errors["cc_expiration"][0]) +
-                                      "\n\n                                            "
+                                      "\n\n                                        "
                                   ),
                                 ])
                               : _vm._e(),
@@ -39042,9 +39130,9 @@ var render = function () {
                                     { staticClass: "invalid-feedback" },
                                     [
                                       _vm._v(
-                                        "\n\n                                                    " +
+                                        "\n\n                                                " +
                                           _vm._s(_vm.errors["cvv"][0]) +
-                                          "\n\n                                                "
+                                          "\n\n                                            "
                                       ),
                                     ]
                                   )
@@ -39068,7 +39156,7 @@ var render = function () {
               [_vm._v("COMPLETE ORDER")]
             ),
             _vm._v(" "),
-            _vm._m(5),
+            _vm._m(4),
           ]
         ),
       ]),
@@ -39107,7 +39195,7 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _vm._m(6),
+        _vm._m(5),
       ]),
     ]),
   ])
@@ -39123,16 +39211,6 @@ var staticRenderFns = [
         { staticClass: "red-title", attrs: { id: "change", href: "add" } },
         [_vm._v("Change")]
       ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex justify-content-end" }, [
-      _c("button", { staticClass: "btn btn-primary" }, [
-        _vm._v("SAVE CHANGES"),
-      ]),
     ])
   },
   function () {
@@ -39189,7 +39267,7 @@ var staticRenderFns = [
               attrs: { type: "radio" },
             }),
             _vm._v(
-              "\n                                    Credit Card\n                                    "
+              "\n                                Credit Card\n                                "
             ),
             _c("img", {
               staticClass: "position-absolute",
@@ -39229,13 +39307,13 @@ var staticRenderFns = [
         _c("div", { staticClass: "d-flex align-items-center" }, [
           _c("img", { attrs: { src: "assets/Return.png" } }),
           _c("strong", { staticClass: "ml-2" }, [
-            _vm._v("60-day fit\n                        guarantee"),
+            _vm._v("60-day fit\n                    guarantee"),
           ]),
         ]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "Either it doesn’t fit or simply you don’t like it You can return it within 60 days for a full\n                        refund. No questions asked."
+            "Either it doesn’t fit or simply you don’t like it You can return it within 60 days for a full\n                    refund. No questions asked."
           ),
         ]),
       ]

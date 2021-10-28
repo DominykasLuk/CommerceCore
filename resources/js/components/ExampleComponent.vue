@@ -15,16 +15,10 @@
                             <th><img class="mr-3" src="assets/2.png"><strong>1x</strong><span
                                 class="simple">{{ item.name }}</span></th>
                             <th class="float-right">${{ item.price }}</th>
-                            <th>
-<!--                                <button id="delete" class="delete btn btn-primary" v-on:click="deleteProduct(item.id)">-->
-<!--                                    DELETE-->
-<!--                                </button>-->
-                            </th>
                         </tr>
                     </table>
 
                     <div class="d-flex justify-content-end">
-                        <button class="btn btn-primary">SAVE CHANGES</button>
                     </div>
                 </div>
 
