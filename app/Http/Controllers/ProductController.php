@@ -46,7 +46,9 @@ class ProductController extends Controller
             'zip' => 'required',
             'cc_number' => 'required',
             'cc_expiration' => 'required',
-            'cvv' => 'required'
+            'cvv' => 'required',
+            'price' => 'required'
+
         ]);
 
         Checkout::create($validatedData);
