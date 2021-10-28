@@ -2426,6 +2426,9 @@ vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(vue_axios__WEBPACK_IMPORTED_MODU
     hasError: function hasError(fieldName) {
       return fieldName in this.errors;
     },
+    getError: function getError(fieldName) {
+      return this.errors[fieldName][0];
+    },
     clearError: function clearError(event) {
       vue__WEBPACK_IMPORTED_MODULE_2__["default"]["delete"](this.errors, event.target.name);
     }
@@ -38140,7 +38143,7 @@ var render = function () {
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
                         "\n                                " +
-                          _vm._s(_vm.errors["fname"][0]) +
+                          _vm._s(_vm.getError("fname")) +
                           "\n\n                            "
                       ),
                     ])
@@ -38181,8 +38184,8 @@ var render = function () {
                 _vm.hasError("lname")
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
-                        "\n                                " +
-                          _vm._s(_vm.errors["lname"][0]) +
+                        "\n                        " +
+                          _vm._s(_vm.getError("lname")) +
                           "\n\n                            "
                       ),
                     ])
@@ -38223,8 +38226,8 @@ var render = function () {
               _vm.hasError("email")
                 ? _c("div", { staticClass: "invalid-feedback" }, [
                     _vm._v(
-                      "\n                            " +
-                        _vm._s(_vm.errors["email"][0]) +
+                      "\n                              " +
+                        _vm._s(_vm.getError("email")) +
                         "\n\n                        "
                     ),
                   ])
@@ -38270,8 +38273,8 @@ var render = function () {
               _vm.hasError("address")
                 ? _c("div", { staticClass: "invalid-feedback" }, [
                     _vm._v(
-                      "\n                            " +
-                        _vm._s(_vm.errors["address"][0]) +
+                      "\n                          " +
+                        _vm._s(_vm.getError("address")) +
                         "\n\n                        "
                     ),
                   ])
@@ -38310,8 +38313,8 @@ var render = function () {
               _vm.hasError("city")
                 ? _c("div", { staticClass: "invalid-feedback" }, [
                     _vm._v(
-                      "\n                            " +
-                        _vm._s(_vm.errors["city"][0]) +
+                      "\n                              " +
+                        _vm._s(_vm.getError("city")) +
                         "\n\n                        "
                     ),
                   ])
@@ -38370,7 +38373,7 @@ var render = function () {
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
                         "\n                                " +
-                          _vm._s(_vm.errors["country"][0]) +
+                          _vm._s(_vm.getError("country")) +
                           "\n\n                            "
                       ),
                     ])
@@ -38427,8 +38430,8 @@ var render = function () {
                 _vm.hasError("state")
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
-                        "\n                                " +
-                          _vm._s(_vm.errors["state"][0]) +
+                        "\n                                    " +
+                          _vm._s(_vm.getError("state")) +
                           "\n\n                            "
                       ),
                     ])
@@ -38468,8 +38471,8 @@ var render = function () {
                 _vm.hasError("zip")
                   ? _c("div", { staticClass: "invalid-feedback" }, [
                       _vm._v(
-                        "\n                                " +
-                          _vm._s(_vm.errors["zip"][0]) +
+                        "\n                               " +
+                          _vm._s(_vm.getError("zip")) +
                           "\n\n                            "
                       ),
                     ])
@@ -38484,6 +38487,7 @@ var render = function () {
               {
                 staticClass: "accordion",
                 attrs: { id: "accordionPanelsStayOpenExample" },
+                on: { keydown: _vm.clearError },
               },
               [
                 _c("div", { staticClass: "accordion-item" }, [

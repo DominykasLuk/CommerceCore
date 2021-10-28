@@ -55,7 +55,7 @@
                             <div
                                 v-if="hasError('fname')"
                                 class="invalid-feedback">
-                                {{ errors['fname'][0] }}
+                                {{ getError('fname')}}
 
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                             <div
                                 v-if="hasError('lname')"
                                 class="invalid-feedback">
-                                {{ errors['lname'][0] }}
+                        {{ getError('lname')}}
 
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                         <div
                             v-if="hasError('email')"
                             class="invalid-feedback">
-                            {{ errors['email'][0] }}
+                              {{ getError('email')}}
 
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                         <div
                             v-if="hasError('address')"
                             class="invalid-feedback">
-                            {{ errors['address'][0] }}
+                          {{ getError('address')}}
 
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                         <div
                             v-if="hasError('city')"
                             class="invalid-feedback">
-                            {{ errors['city'][0] }}
+                              {{ getError('city')}}
 
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                             <div
                                 v-if="hasError('country')"
                                 class="invalid-feedback">
-                                {{ errors['country'][0] }}
+                                {{ getError('country')}}
 
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                             <div
                                 v-if="hasError('state')"
                                 class="invalid-feedback">
-                                {{ errors['state'][0] }}
+                                    {{ getError('state')}}
 
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                             <div
                                 v-if="hasError('zip')"
                                 class="invalid-feedback">
-                                {{ errors['zip'][0] }}
+                               {{ getError('zip')}}
 
                             </div>
                         </div>
@@ -162,7 +162,7 @@
                         <p><img src="assets/CheckOVal.png">All Transactions are secure and encrypted</p>
                     </div>
 
-                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion" id="accordionPanelsStayOpenExample" @keydown="clearError">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                                 <button
@@ -358,6 +358,9 @@ export default {
         },
         hasError(fieldName) {
             return (fieldName in this.errors);
+        },
+        getError(fieldName){
+            return this.errors[fieldName][0];
         },
         clearError(event){
             Vue.delete(this.errors, event.target.name);
