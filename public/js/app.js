@@ -2430,7 +2430,7 @@ vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(vue_axios__WEBPACK_IMPORTED_MODU
       return this.errors[fieldName][0];
     },
     clearError: function clearError(event) {
-      vue__WEBPACK_IMPORTED_MODULE_2__["default"]["delete"](this.errors, event.target.name);
+      this.errors = {};
     }
   },
   mounted: function mounted() {
@@ -38066,13 +38066,13 @@ var render = function () {
           "form",
           {
             staticClass: "needs-validation p-3 bg-white rounded my-1",
-            attrs: { method: "post", novalidate: "" },
+            attrs: { method: "post", novalidate: "novalidate" },
             on: {
-              keydown: _vm.clearError,
               submit: function ($event) {
                 $event.preventDefault()
                 return _vm.storeCheckout.apply(null, arguments)
               },
+              keydown: _vm.clearError,
             },
           },
           [

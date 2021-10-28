@@ -29,8 +29,8 @@
                 </div>
 
                 <h5 class="red-title mt-4">PAYMENT AND SHIPPING</h5>
-                <form class="needs-validation p-3 bg-white rounded my-1" method="post" @keydown="clearError" @submit.prevent="storeCheckout"
-                      novalidate>
+                <form class="needs-validation p-3 bg-white rounded my-1" @submit.prevent="storeCheckout" method="post"  @keydown="clearError"
+                      novalidate="novalidate">
 
                     <div class="contact-form-success alert alert-success mt-4" v-if="success">
                         <strong>Success!</strong> Your checkout has been initiated!
@@ -363,7 +363,7 @@ export default {
             return this.errors[fieldName][0];
         },
         clearError(event){
-            Vue.delete(this.errors, event.target.name);
+           this.errors = {}
         }
 
     },
