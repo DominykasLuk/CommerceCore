@@ -100,7 +100,7 @@
 export default {
     data() {
         return {
-            list: null,
+            list: [],
             success: false,
             error: false,
             errors: {},

@@ -2166,7 +2166,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      list: null,
+      list: [],
       success: false,
       error: false,
       errors: {},
@@ -2252,6 +2252,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.esm.min.js");
+//
+//
 //
 //
 //
@@ -38708,35 +38710,6 @@ var render = function () {
             },
           },
           [
-            _vm.success
-              ? _c(
-                  "div",
-                  {
-                    staticClass:
-                      "contact-form-success alert alert-success mt-4",
-                  },
-                  [
-                    _c("strong", [_vm._v("Success!")]),
-                    _vm._v(
-                      " Your checkout has been\n                    initiated!\n                "
-                    ),
-                  ]
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.error
-              ? _c(
-                  "div",
-                  {
-                    staticClass: "contact-form-success alert alert-danger mt-4",
-                  },
-                  [
-                    _c("strong", [_vm._v("Error!")]),
-                    _vm._v(" There was an error\n                "),
-                  ]
-                )
-              : _vm._e(),
-            _vm._v(" "),
             _c("div", { staticClass: "row" }, [
               _vm._m(1),
               _vm._v(" "),
@@ -39297,6 +39270,35 @@ var render = function () {
               },
               [_vm._v("\n                    COMPLETE ORDER\n                ")]
             ),
+            _vm._v(" "),
+            _vm.success
+              ? _c(
+                  "div",
+                  {
+                    staticClass:
+                      "contact-form-success alert alert-success mt-4",
+                  },
+                  [
+                    _c("strong", [_vm._v("Success!")]),
+                    _vm._v(
+                      " Your checkout has been\n                    initiated!\n                "
+                    ),
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.error
+              ? _c(
+                  "div",
+                  {
+                    staticClass: "contact-form-success alert alert-danger mt-4",
+                  },
+                  [
+                    _c("strong", [_vm._v("Error!")]),
+                    _vm._v(" There was an error\n                "),
+                  ]
+                )
+              : _vm._e(),
             _vm._v(" "),
             _vm._m(4),
           ]

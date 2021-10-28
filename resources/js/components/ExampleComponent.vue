@@ -41,20 +41,7 @@
                 >
 
                 
-                    <div
-                        class="contact-form-success alert alert-success mt-4"
-                        v-if="success"
-                    >
-                        <strong>Success!</strong> Your checkout has been
-                        initiated!
-                    </div>
-
-                    <div
-                        class="contact-form-success alert alert-danger mt-4"
-                        v-if="error"
-                    >
-                        <strong>Error!</strong> There was an error
-                    </div>
+                    
 
                     <div class="row">
                         <div class="col-sm-12">
@@ -339,12 +326,27 @@
                     >
                         COMPLETE ORDER
                     </button>
+                    <div
+                        class="contact-form-success alert alert-success mt-4"
+                        v-if="success"
+                    >
+                        <strong>Success!</strong> Your checkout has been
+                        initiated!
+                    </div>
+
+                    <div
+                        class="contact-form-success alert alert-danger mt-4"
+                        v-if="error"
+                    >
+                        <strong>Error!</strong> There was an error
+                    </div>
                     <div class="d-flex justify-content-center">
                         <img src="/assets/NortonSecure.png" />
                         <img src="/assets/VeriSign.png" />
                         <img src="/assets/McAfee.png" />
                         <img src="/assets/Comodo.png" />
                     </div>
+
                 </form>
             </div>
 
