@@ -2653,8 +2653,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -2709,7 +2707,7 @@ vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(vue_axios__WEBPACK_IMPORTED_MODU
     getData: function getData() {
       var _this = this;
 
-      vue__WEBPACK_IMPORTED_MODULE_2__["default"].axios.get('http://localhost:8000/api/products').then(function (resp) {
+      vue__WEBPACK_IMPORTED_MODULE_2__["default"].axios.get("http://localhost:8000/api/products").then(function (resp) {
         _this.list = resp.data;
         console.warn(resp.data);
       });
@@ -2724,7 +2722,7 @@ vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(vue_axios__WEBPACK_IMPORTED_MODU
     storeCheckout: function storeCheckout() {
       var _this3 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/checkout/', this.formData).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post("/api/checkout/", this.formData).then(function (res) {
         _this3.onSuccess(res.data.message);
       })["catch"](function (error) {
         if (error.response.status == 422) {
@@ -39245,9 +39243,7 @@ var render = function () {
                                     { staticClass: "invalid-feedback" },
                                     [
                                       _vm._v(
-                                        "\n                                                " +
-                                          _vm._s(_vm.errors["cvv"][0]) +
-                                          "\n                                            "
+                                        "\n                                                The valid cvv field is\n                                                required.\n                                            "
                                       ),
                                     ]
                                   )
@@ -39408,12 +39404,11 @@ var staticRenderFns = [
             },
           },
           [
-            _c("input", {
-              staticClass: "radio-button",
-              attrs: { type: "radio" },
-            }),
+            _c("div", { staticClass: "radio" }, [
+              _c("input", { attrs: { id: "yes", type: "radio", name: "s" } }),
+            ]),
             _vm._v(
-              "\n                                Credit Card\n                                "
+              "    \n                                Credit Card\n                                "
             ),
             _c("img", {
               staticClass: "position-absolute",

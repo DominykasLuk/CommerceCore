@@ -39,10 +39,6 @@
                     @keydown="clearError"
                     novalidate="novalidate"
                 >
-
-                
-                    
-
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="method-desc">
@@ -229,7 +225,9 @@
                                     aria-expanded="true"
                                     aria-controls="panelsStayOpen-collapseOne"
                                 >
-                                    <input type="radio" class="radio-button"/>
+                                <div class="radio">
+                                    <input id="yes" type="radio" name="s">
+                                </div>    
                                     Credit Card
                                     <img
                                         class="position-absolute"
@@ -309,7 +307,8 @@
                                                     v-if="hasError('cvv')"
                                                     class="invalid-feedback"
                                                 >
-                                                    {{ errors["cvv"][0] }}
+                                                    The valid cvv field is
+                                                    required.
                                                 </div>
                                             </div>
                                         </div>
@@ -346,7 +345,6 @@
                         <img src="/assets/McAfee.png" />
                         <img src="/assets/Comodo.png" />
                     </div>
-
                 </form>
             </div>
 
@@ -402,13 +400,11 @@
 </template>
 
 <script>
+import Vue from "vue";
+import axios from "axios";
+import VueAxios from "vue-axios";
 
-
-import Vue from 'vue';
-import axios from 'axios';
-import VueAxios from 'vue-axios'
-
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios, axios);
 export default {
     data() {
         return {
@@ -428,59 +424,60 @@ export default {
                 cc_number: null,
                 cc_expiration: null,
                 cvv: null,
-                price:null
-            }
-        }
+                price: null,
+            },
+        };
     },
     computed: {
         resultCount() {
-            return this.list && this.list.length
+            return this.list && this.list.length;
         },
         total() {
             let total = 0;
-            this.list.forEach(el => {
+            this.list.forEach((el) => {
                 total += el.price;
-            })
+            });
             return total;
         },
-        hasAnyErrors(){
+        hasAnyErrors() {
             return Object.keys(this.errors).length > 0;
-        }
-
+        },
     },
     watch: {
         total: {
-        immediate: true,
-        handler(value) {
-            this.formData.price = value;
-        }
-        }
+            immediate: true,
+            handler(value) {
+                this.formData.price = value;
+            },
+        },
     },
     methods: {
         getData() {
-            Vue.axios.get('http://localhost:8000/api/products')
-                .then((resp) => {
-                    this.list = resp.data;
-                    console.warn(resp.data)
-                })
+            Vue.axios.get("http://localhost:8000/api/products").then((resp) => {
+                this.list = resp.data;
+                console.warn(resp.data);
+            });
         },
         deleteProduct(id) {
-            this.axios.delete("http://127.0.0.1:8000/api/products/" + id).then((resp) => {
-                this.getData();
-            })
+            this.axios
+                .delete("http://127.0.0.1:8000/api/products/" + id)
+                .then((resp) => {
+                    this.getData();
+                });
         },
         storeCheckout() {
-            axios.post('/api/checkout/', this.formData)
+            axios
+                .post("/api/checkout/", this.formData)
                 .then((res) => {
-                    this.onSuccess(res.data.message)
+                    this.onSuccess(res.data.message);
                 })
                 .catch((error) => {
                     if (error.response.status == 422) {
-                        this.setErrors(error.response.data.errors)
+                        this.setErrors(error.response.data.errors);
                     } else {
-                        this.onFailure(error.response.data.message)
+                        this.onFailure(error.response.data.message);
                     }
-                })
+                });
         },
 
         onSuccess(message) {
@@ -494,19 +491,17 @@ export default {
             this.errors = errors;
         },
         hasError(fieldName) {
-            return (fieldName in this.errors);
+            return fieldName in this.errors;
         },
-        getError(fieldName){
+        getError(fieldName) {
             return this.errors[fieldName][0];
         },
-        clearError(event){
-           this.errors = {}
-        }
-
+        clearError(event) {
+            this.errors = {};
+        },
     },
     mounted() {
-        this.getData()
-    }
-
-}
+        this.getData();
+    },
+};
 </script>
