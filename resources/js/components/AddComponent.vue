@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-sm-7 p-5">
+            <div class="col-md-7 p-5">
                 <h5 class="red-title">VARIANTS</h5>
                 <div class="variants bg-white p-3 rounded my-1">
                     <table class="col-12 float-down">

@@ -38406,7 +38406,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-sm-7 p-5" }, [
+      _c("div", { staticClass: "col-md-7 p-5" }, [
         _c("h5", { staticClass: "red-title" }, [_vm._v("VARIANTS")]),
         _vm._v(" "),
         _c("div", { staticClass: "variants bg-white p-3 rounded my-1" }, [
@@ -38646,7 +38646,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-sm-7 p-5" }, [
+      _c("div", { staticClass: "col-md-7 p-5" }, [
         _c("h5", { staticClass: "red-title" }, [_vm._v("VARIANTS")]),
         _vm._v(" "),
         _c("div", { staticClass: "variants bg-white p-3 rounded my-1" }, [
@@ -39429,15 +39429,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex justify-content-center" }, [
-      _c("img", { attrs: { src: "/assets/NortonSecure.png" } }),
-      _vm._v(" "),
-      _c("img", { attrs: { src: "/assets/VeriSign.png" } }),
-      _vm._v(" "),
-      _c("img", { attrs: { src: "/assets/McAfee.png" } }),
-      _vm._v(" "),
-      _c("img", { attrs: { src: "/assets/Comodo.png" } }),
-    ])
+    return _c(
+      "div",
+      { staticClass: "security d-flex justify-content-center" },
+      [
+        _c("img", { attrs: { src: "/assets/NortonSecure.png" } }),
+        _vm._v(" "),
+        _c("img", { attrs: { src: "/assets/VeriSign.png" } }),
+        _vm._v(" "),
+        _c("img", { attrs: { src: "/assets/McAfee.png" } }),
+        _vm._v(" "),
+        _c("img", { attrs: { src: "/assets/Comodo.png" } }),
+      ]
+    )
   },
   function () {
     var _vm = this

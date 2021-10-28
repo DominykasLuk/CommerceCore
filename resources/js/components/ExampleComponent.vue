@@ -1,7 +1,7 @@
 <template xmlns:sv-bind="http://www.w3.org/1999/xhtml">
     <div class="container">
         <div class="row">
-            <div class="col-sm-7 p-5">
+            <div class="col-md-7 p-5">
                 <h5 class="red-title">VARIANTS</h5>
                 <div class="variants bg-white p-3 rounded my-1">
                     <table class="col-12 float-down">
@@ -340,7 +340,7 @@
                     >
                         <strong>Error!</strong> There was an error
                     </div>
-                    <div class="d-flex justify-content-center">
+                    <div class="security d-flex justify-content-center">
                         <img src="/assets/NortonSecure.png" />
                         <img src="/assets/VeriSign.png" />
                         <img src="/assets/McAfee.png" />
