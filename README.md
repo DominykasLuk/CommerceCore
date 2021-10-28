@@ -4,6 +4,6 @@
 4. run command php artisan migrate 
 5. run command php artisan serve
 6. run command npm install
-7. in your browser go to: http://127.0.0.1:8000/example
+7. in your browser go to: http://127.0.0.1:8000
 8. add some products in database directly threw database
 9. complete the checkout checkout
