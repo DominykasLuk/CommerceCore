@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+main.py-4 {
+    background: #E5E5E5;
+}
+
+.col-sm-7.p-5 {
+    background: #F8F1EB;
+    padding: 5rem !important;
+}
+
+.accordion-button::after {
+    display: none !important;
+}
+
+table.table tr {
+    border: none !important;
+}
+
+.table th, .table td {
+    border-top: none !important;
+}
+
+hr.line {
+    border-top: 1px solid #F2F2F2;
+}
+
+.btn.btn-primary {
+    background-color: #DC624E !important;
+    border: 1px solid #DC624E !important;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+.btn:focus, .btn.focus {
+    box-shadow: none !important;
+}
+
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fff;
+    color: #000;
+}
+
+.form-control:focus,
+.custom-select:focus {
+    border-color: #000;
+    outline: 0;
+    box-shadow: none !important;
+
+}
+
+.accordion-body {
+    background-color: #FAFAFA;
+}
+
+.info {
+    right: 10px;
+    bottom: 10px;
+}
+
+.method-desc h5 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.method-desc p {
+    font-weight: 400;
+    font-size: 12px;
+    color: #BDBDBD;
+}
+
+.method-desc img {
+    margin-right: 5px;
+}
+
+input#firstName,
+input#lastName,
+input#email,
+input#address,
+input#city,
+select#country,
+select#state,
+input#zip {
+    height: 48px !important;
+}
+
+.col-sm-4.mb-3 span {
+    position: absolute;
+    left: 24px;
+}
+
+.country option {
+    position: relative;
+    top: 5px;
+}
+
+span.select {
+    position: absolute;
+    bottom: 1px;
+}
+
+label.address {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+p.customer-info {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+h5.red-title {
+    color: #DC624E;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.square {
+    height: 40px;
+    width: 40px;
+    background-color: #F8F1EB;
+}
+
+.square img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.float-down .float-right {
+    position: relative;
+    top: 8px;
+}
+
+.pt-5 {
+    padding-top: 6rem !important;
+}
+
+th.total {
+    font-weight: 400;
+    font-size: 18px;
+    color: #828282;
+}
+
+span.usd {
+    font-weight: 500;
+    font-size: 12px;
+    color: #000;
+}
+
+strong.price {
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+a.red-title {
+    color: #DC624E;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+span.simple {
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+}
+
+
+table.col-12.float-down td {
+    position: relative;
+}
+
+
+button.delete.btn.btn-primary.float-right {
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+
