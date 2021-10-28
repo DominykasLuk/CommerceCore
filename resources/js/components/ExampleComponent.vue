@@ -262,7 +262,7 @@
                                                 v-if="hasError('cc_number')"
                                                 class="invalid-feedback"
                                             >
-                                                {{ errors["cc_number"][0] }}
+                                                {{ getError("cc_number") }}
                                             </div>
                                         </div>
                                     </div>
@@ -285,7 +285,7 @@
                                                 v-if="hasError('cc_expiration')"
                                                 class="invalid-feedback"
                                             >
-                                                {{ errors["cc_expiration"][0] }}
+                                                {{ getError("cc_expiration") }}
                                             </div>
                                         </div>
                                         <div class="col-sm-3 mb-3">
