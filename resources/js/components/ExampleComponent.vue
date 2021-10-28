@@ -232,7 +232,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary btn-lg btn-block my-3" type="submit">COMPLETE ORDER</button>
+                    <button class="btn btn-primary btn-lg btn-block my-3" type="submit" :disabled="hasAnyErrors">COMPLETE ORDER</button>
                     <div class="d-flex justify-content-center">
                         <img src="/assets/NortonSecure.png">
                         <img src="/assets/VeriSign.png">

@@ -38661,7 +38661,7 @@ var render = function () {
               "button",
               {
                 staticClass: "btn btn-primary btn-lg btn-block my-3",
-                attrs: { type: "submit" },
+                attrs: { type: "submit", disabled: _vm.hasAnyErrors },
               },
               [_vm._v("COMPLETE ORDER")]
             ),
