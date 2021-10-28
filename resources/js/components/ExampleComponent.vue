@@ -7,7 +7,7 @@
                     <table class="col-12 float-down">
                         <th><img class="mr-3" src="assets/1.png"><strong>{{ resultCount }}x </strong><span
                             class="simple">CoreProducts</span></th>
-                        <th class="float-right"><a class="red-title" id="change" href="#">Change</a></th>
+                        <th class="float-right"><a class="red-title" id="change" href="add">Change</a></th>
                     </table>
                     <hr class="line">
                     <table class="col-12 float-down">
