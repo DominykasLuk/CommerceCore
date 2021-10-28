@@ -44,7 +44,7 @@ class ProductController extends Controller
             'country' => 'required',
             'state' => 'required',
             'zip' => 'required',
-            'cc_number' => 'required',
+            'cc_number' => 'required|min:16|max:16',
             'cc_expiration' => 'required',
             'cvv' => 'required',
             'price' => 'required'
