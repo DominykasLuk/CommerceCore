@@ -5,32 +5,54 @@
                 <h5 class="red-title">VARIANTS</h5>
                 <div class="variants bg-white p-3 rounded my-1">
                     <table class="col-12 float-down">
-                        <th><img class="mr-3" src="assets/1.png"><strong>{{ resultCount }}x </strong><span
-                            class="simple">CoreProducts</span></th>
-                        <th class="float-right"><a class="red-title" id="change" href="add">Change</a></th>
+                        <th>
+                            <img class="mr-3" src="assets/1.png" /><strong
+                                >{{ resultCount }}x </strong
+                            ><span class="simple">CoreProducts</span>
+                        </th>
+                        <th class="float-right">
+                            <a class="red-title" id="change" href="add"
+                                >Change</a
+                            >
+                        </th>
                     </table>
-                    <hr class="line">
+                    <hr class="line" />
                     <table class="col-12 float-down">
                         <tr v-for="item in list" v-bind:key="item.id">
-                            <th><img class="mr-3" src="assets/2.png"><strong>1x</strong><span
-                                class="simple">{{ item.name }}</span></th>
+                            <th>
+                                <img class="mr-3" src="assets/2.png" /><strong
+                                    >1x</strong
+                                ><span class="simple">{{ item.name }}</span>
+                            </th>
                             <th class="float-right">${{ item.price }}</th>
                         </tr>
                     </table>
 
-                    <div class="d-flex justify-content-end">
-                    </div>
+                    <div class="d-flex justify-content-end"></div>
                 </div>
 
                 <h5 class="red-title mt-4">PAYMENT AND SHIPPING</h5>
-                <form class="needs-validation p-3 bg-white rounded my-1" @submit.prevent="storeCheckout" method="post"  @keydown="clearError"
-                      novalidate="novalidate">
+                <form
+                    class="needs-validation p-3 bg-white rounded my-1"
+                    @submit.prevent="storeCheckout"
+                    method="post"
+                    @keydown="clearError"
+                    novalidate="novalidate"
+                >
 
-                    <div class="contact-form-success alert alert-success mt-4" v-if="success">
-                        <strong>Success!</strong> Your checkout has been initiated!
+                
+                    <div
+                        class="contact-form-success alert alert-success mt-4"
+                        v-if="success"
+                    >
+                        <strong>Success!</strong> Your checkout has been
+                        initiated!
                     </div>
 
-                    <div class="contact-form-success alert alert-danger mt-4" v-if="error">
+                    <div
+                        class="contact-form-success alert alert-danger mt-4"
+                        v-if="error"
+                    >
                         <strong>Error!</strong> There was an error
                     </div>
 
@@ -42,183 +64,267 @@
                             </div>
                         </div>
                         <div class="col-sm-6 mb-3">
-                            <input type="text" class="form-control" id="firstName" name="fname" v-model="formData.fname"
-                                   placeholder="*First name" value=""
-                                   required
-                                   :class="hasError('fname') ? 'is-invalid' : ''">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="firstName"
+                                name="fname"
+                                v-model="formData.fname"
+                                placeholder="*First name"
+                                value=""
+                                required
+                                :class="hasError('fname') ? 'is-invalid' : ''"
+                            />
                             <div
                                 v-if="hasError('fname')"
-                                class="invalid-feedback">
-                                {{ getError('fname')}}
-
+                                class="invalid-feedback"
+                            >
+                                {{ getError("fname") }}
                             </div>
                         </div>
                         <div class="col-sm-6 mb-3">
-                            <input type="text" class="form-control" id="lastName" name="lname" v-model="formData.lname"
-                                   placeholder="*Last name" value=""
-                                   required
-                                   :class="hasError('lname') ? 'is-invalid' : ''">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="lastName"
+                                name="lname"
+                                v-model="formData.lname"
+                                placeholder="*Last name"
+                                value=""
+                                required
+                                :class="hasError('lname') ? 'is-invalid' : ''"
+                            />
                             <div
                                 v-if="hasError('lname')"
-                                class="invalid-feedback">
-                        {{ getError('lname')}}
-
+                                class="invalid-feedback"
+                            >
+                                {{ getError("lname") }}
                             </div>
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="*Email"
-                               v-model="formData.email"
-                               required
-                               :class="hasError('email') ? 'is-invalid' : ''">
-                        <div
-                            v-if="hasError('email')"
-                            class="invalid-feedback">
-                              {{ getError('email')}}
-
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="*Email"
+                            v-model="formData.email"
+                            required
+                            :class="hasError('email') ? 'is-invalid' : ''"
+                        />
+                        <div v-if="hasError('email')" class="invalid-feedback">
+                            {{ getError("email") }}
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <label for="address" class="address">Shipping Address</label>
-                        <input type="text" class="form-control" id="address" name="address" placeholder="*Address"
-                               v-model="formData.address"
-                               required
-                               :class="hasError('address') ? 'is-invalid' : ''">
+                        <label for="address" class="address"
+                            >Shipping Address</label
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="address"
+                            name="address"
+                            placeholder="*Address"
+                            v-model="formData.address"
+                            required
+                            :class="hasError('address') ? 'is-invalid' : ''"
+                        />
                         <div
                             v-if="hasError('address')"
-                            class="invalid-feedback">
-                          {{ getError('address')}}
-
+                            class="invalid-feedback"
+                        >
+                            {{ getError("address") }}
                         </div>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="city" name="city" placeholder="*City"
-                               v-model="formData.city"
-                               :class="hasError('city') ? 'is-invalid' : ''">
-                        <div
-                            v-if="hasError('city')"
-                            class="invalid-feedback">
-                              {{ getError('city')}}
-
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="city"
+                            name="city"
+                            placeholder="*City"
+                            v-model="formData.city"
+                            :class="hasError('city') ? 'is-invalid' : ''"
+                        />
+                        <div v-if="hasError('city')" class="invalid-feedback">
+                            {{ getError("city") }}
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-sm-4 mb-3">
                             <span>*Country</span>
-                            <select class="custom-select country d-block w-100" name="country" id="country"
-                                    v-model="formData.country"
-                                    required
-                                    :class="hasError('country') ? 'is-invalid' : ''">
-
+                            <select
+                                class="custom-select country d-block w-100"
+                                name="country"
+                                id="country"
+                                v-model="formData.country"
+                                required
+                                :class="hasError('country') ? 'is-invalid' : ''"
+                            >
                                 <option class="option" value=""></option>
                                 <option>United States</option>
                             </select>
                             <div
                                 v-if="hasError('country')"
-                                class="invalid-feedback">
-                                {{ getError('country')}}
-
+                                class="invalid-feedback"
+                            >
+                                {{ getError("country") }}
                             </div>
                         </div>
                         <div class="col-sm-4 mb-3">
                             <span>*State</span>
-                            <select :class="hasError('state') ? 'is-invalid' : ''"
-                                    class="custom-select state d-block w-100" name="state" id="state"
-                                    v-model="formData.state" required>
+                            <select
+                                :class="hasError('state') ? 'is-invalid' : ''"
+                                class="custom-select state d-block w-100"
+                                name="state"
+                                id="state"
+                                v-model="formData.state"
+                                required
+                            >
                                 <option class="option" value=""></option>
                                 <option>California</option>
                             </select>
                             <div
                                 v-if="hasError('state')"
-                                class="invalid-feedback">
-                                    {{ getError('state')}}
-
+                                class="invalid-feedback"
+                            >
+                                {{ getError("state") }}
                             </div>
                         </div>
                         <div class="col-sm-4 mb-3">
-                            <input :class="hasError('zip') ? 'is-invalid' : ''" type="text" class="form-control "
-                                   id="zip" name="zip" placeholder="*Postal code" v-model="formData.zip"
-                                   required>
+                            <input
+                                :class="hasError('zip') ? 'is-invalid' : ''"
+                                type="text"
+                                class="form-control"
+                                id="zip"
+                                name="zip"
+                                placeholder="*Postal code"
+                                v-model="formData.zip"
+                                required
+                            />
                             <div
                                 v-if="hasError('zip')"
-                                class="invalid-feedback">
-                               {{ getError('zip')}}
-
+                                class="invalid-feedback"
+                            >
+                                {{ getError("zip") }}
                             </div>
                         </div>
                     </div>
 
                     <div class="method-desc">
                         <h5>Payment Method</h5>
-                        <p><img src="assets/CheckOVal.png">All Transactions are secure and encrypted</p>
+                        <p>
+                            <img src="assets/CheckOVal.png" />All Transactions
+                            are secure and encrypted
+                        </p>
                     </div>
 
-                    <div class="accordion" id="accordionPanelsStayOpenExample" @keydown="clearError">
+                    <div
+                        class="accordion"
+                        id="accordionPanelsStayOpenExample"
+                        @keydown="clearError"
+                    >
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <h2
+                                class="accordion-header"
+                                id="panelsStayOpen-headingOne"
+                            >
                                 <button
-                                    class="accordion-button position-relative" type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                                        aria-controls="panelsStayOpen-collapseOne">
-                                    <input type="radio" class="radio-button">
+                                    class="accordion-button position-relative"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne"
+                                >
+                                    <input type="radio" class="radio-button" />
                                     Credit Card
-                                    <img class="position-absolute" src="assets/security.png" style="right: 10px">
+                                    <img
+                                        class="position-absolute"
+                                        src="assets/security.png"
+                                        style="right: 10px"
+                                    />
                                 </button>
                             </h2>
-                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse "
-                                 aria-labelledby="panelsStayOpen-headingOne">
+                            <div
+                                id="panelsStayOpen-collapseOne"
+                                class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingOne"
+                            >
                                 <div class="accordion-body">
                                     <div class="row">
                                         <div class="col-sm-12 mb-3">
                                             <input
-                                                :class="hasError('cc_number') ? 'is-invalid' : ''"
-                                                type="text" class="form-control" id="cc-number" name="cc-number"
-                                                   placeholder="Card number" required v-model="formData.cc_number">
+                                                :class="
+                                                    hasError('cc_number')
+                                                        ? 'is-invalid'
+                                                        : ''
+                                                "
+                                                type="text"
+                                                class="form-control"
+                                                id="cc-number"
+                                                name="cc-number"
+                                                placeholder="Card number"
+                                                required
+                                                v-model="formData.cc_number"
+                                            />
                                             <div
                                                 v-if="hasError('cc_number')"
-                                                class="invalid-feedback">
-                                                {{ errors['cc_number'][0] }}
-
+                                                class="invalid-feedback"
+                                            >
+                                                {{ errors["cc_number"][0] }}
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-3 mb-3">
                                             <input
-                                                :class="hasError('cc_expiration') ? 'is-invalid' : ''"
-                                                type="text" class="form-control" id="cc-expiration"
-                                                   v-model="formData.cc_expiration"
-                                                   placeholder="MM/YY" required>
+                                                :class="
+                                                    hasError('cc_expiration')
+                                                        ? 'is-invalid'
+                                                        : ''
+                                                "
+                                                type="text"
+                                                class="form-control"
+                                                id="cc-expiration"
+                                                v-model="formData.cc_expiration"
+                                                placeholder="MM/YY"
+                                                required
+                                            />
                                             <div
                                                 v-if="hasError('cc_expiration')"
-                                                class="invalid-feedback">
-
-                                                {{ errors['cc_expiration'][0] }}
-
+                                                class="invalid-feedback"
+                                            >
+                                                {{ errors["cc_expiration"][0] }}
                                             </div>
                                         </div>
                                         <div class="col-sm-3 mb-3">
                                             <div class="position-relative">
                                                 <input
-                                                    :class="hasError('cvv') ? 'is-invalid' : ''"
-
-                                                    type="text" class="form-control" id="cc-cvv"
-                                                       v-model="formData.cvv"
-                                                       placeholder="CVV"
-                                                       required>
+                                                    :class="
+                                                        hasError('cvv')
+                                                            ? 'is-invalid'
+                                                            : ''
+                                                    "
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="cc-cvv"
+                                                    v-model="formData.cvv"
+                                                    placeholder="CVV"
+                                                    required
+                                                />
                                                 <div
                                                     v-if="hasError('cvv')"
-                                                    class="invalid-feedback">
-
-                                                    {{ errors['cvv'][0] }}
-
+                                                    class="invalid-feedback"
+                                                >
+                                                    {{ errors["cvv"][0] }}
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -226,26 +332,36 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary btn-lg btn-block my-3" type="submit" :disabled="hasAnyErrors">COMPLETE ORDER</button>
+                    <button
+                        class="btn btn-primary btn-lg btn-block my-3"
+                        type="submit"
+                        :disabled="hasAnyErrors"
+                    >
+                        COMPLETE ORDER
+                    </button>
                     <div class="d-flex justify-content-center">
-                        <img src="/assets/NortonSecure.png">
-                        <img src="/assets/VeriSign.png">
-                        <img src="/assets/McAfee.png">
-                        <img src="/assets/Comodo.png">
+                        <img src="/assets/NortonSecure.png" />
+                        <img src="/assets/VeriSign.png" />
+                        <img src="/assets/McAfee.png" />
+                        <img src="/assets/Comodo.png" />
                     </div>
                 </form>
             </div>
 
-
             <div class="col-md-5 bg-white p-5 pt-5">
                 <table class="col-12 float-down">
                     <tr>
-                        <th><img class="mr-3" src="assets/1.png"><strong>{{ resultCount }}x </strong><span
-                            class="simple">CoreProducts</span></th>
-                        <th class="float-right"><strong>${{ total }}</strong></th>
+                        <th>
+                            <img class="mr-3" src="assets/1.png" /><strong
+                                >{{ resultCount }}x </strong
+                            ><span class="simple">CoreProducts</span>
+                        </th>
+                        <th class="float-right">
+                            <strong>${{ total }}</strong>
+                        </th>
                     </tr>
                 </table>
-                <hr class="line">
+                <hr class="line" />
                 <table class="col-12">
                     <tr>
                         <th class="total">Total:</th>
@@ -255,11 +371,28 @@
                         </th>
                     </tr>
                 </table>
-                <div class="border d-flex justify-content-center align-content-center flex-column p-4 rounded mt-3">
-                    <div class="d-flex align-items-center"><img src="assets/Return.png"><strong class="ml-2">60-day fit
-                        guarantee</strong></div>
-                    <p>Either it doesn’t fit or simply you don’t like it You can return it within 60 days for a full
-                        refund. No questions asked.</p>
+                <div
+                    class="
+                        border
+                        d-flex
+                        justify-content-center
+                        align-content-center
+                        flex-column
+                        p-4
+                        rounded
+                        mt-3
+                    "
+                >
+                    <div class="d-flex align-items-center">
+                        <img src="assets/Return.png" /><strong class="ml-2"
+                            >60-day fit guarantee</strong
+                        >
+                    </div>
+                    <p>
+                        Either it doesn’t fit or simply you don’t like it You
+                        can return it within 60 days for a full refund. No
+                        questions asked.
+                    </p>
                 </div>
             </div>
         </div>
@@ -277,7 +410,7 @@ Vue.use(VueAxios, axios)
 export default {
     data() {
         return {
-            list: null,
+            list: [],
             success: false,
             error: false,
             errors: {},
@@ -312,6 +445,14 @@ export default {
             return Object.keys(this.errors).length > 0;
         }
 
+    },
+    watch: {
+        total: {
+        immediate: true,
+        handler(value) {
+            this.formData.price = value;
+        }
+        }
     },
     methods: {
         getData() {
