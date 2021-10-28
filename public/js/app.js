@@ -2207,8 +2207,8 @@ __webpack_require__.r(__webpack_exports__);
     addProduct: function addProduct() {
       var _this3 = this;
 
-      axios.post('/api/products/', this.formData).then(function (res) {
-        _this3.onSuccess(res.data.message);
+      axios.post('/api/products/', this.formData).then(function (resp) {
+        _this3.getData();
       });
     },
     onSuccess: function onSuccess(message) {
@@ -38334,6 +38334,7 @@ var render = function () {
             attrs: { method: "post" },
             on: {
               submit: function ($event) {
+                $event.stopPropagation()
                 $event.preventDefault()
                 return _vm.addProduct.apply(null, arguments)
               },

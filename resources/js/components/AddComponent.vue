@@ -40,7 +40,7 @@
                 </div>
 
 
-                    <form class="d-flex flex-column" @submit.prevent="addProduct" method="post" >
+                    <form class="d-flex flex-column" @submit.stop.prevent="addProduct" method="post" >
                         <input class="my-3" placeholder="Product Name" type="text" name="productName" v-model="formData.name">
                         <input placeholder="Price" type="text" name="price" v-model="formData.price">
                         <button type="submit" class="btn btn-primary mt-3">Submit</button>
@@ -140,9 +140,9 @@ export default {
         },
         addProduct() {
             axios.post('/api/products/', this.formData)
-                .then((res) => {
-                    this.onSuccess(res.data.message)
-                })
+               .then((resp) => {
+                    this.getData();
+                });
         },
 
         onSuccess(message) {
