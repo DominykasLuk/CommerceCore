@@ -38407,7 +38407,7 @@ var render = function () {
       _c("div", { staticClass: "col-md-7 p-5" }, [
         _c("h5", { staticClass: "red-title" }, [_vm._v("VARIANTS")]),
         _vm._v(" "),
-        _c("div", { staticClass: "variants bg-white p-3 rounded my-1" }, [
+        _c("div", { staticClass: "variants bg-white p-3 rounded my-1 edit" }, [
           _c("table", { staticClass: "col-12 float-down" }, [
             _c("th", [
               _c("img", {
@@ -38445,7 +38445,7 @@ var render = function () {
                   _c(
                     "button",
                     {
-                      staticClass: "delete btn btn-primary",
+                      staticClass: "delete btn btn-primary btn-sm",
                       attrs: { id: "delete" },
                       on: {
                         click: function ($event) {
@@ -39148,7 +39148,7 @@ var render = function () {
                               ? _c("div", { staticClass: "invalid-feedback" }, [
                                   _vm._v(
                                     "\n                                            " +
-                                      _vm._s(_vm.errors["cc_number"][0]) +
+                                      _vm._s(_vm.getError("cc_number")) +
                                       "\n                                        "
                                   ),
                                 ])
@@ -39196,7 +39196,7 @@ var render = function () {
                               ? _c("div", { staticClass: "invalid-feedback" }, [
                                   _vm._v(
                                     "\n                                            " +
-                                      _vm._s(_vm.errors["cc_expiration"][0]) +
+                                      _vm._s(_vm.getError("cc_expiration")) +
                                       "\n                                        "
                                   ),
                                 ])

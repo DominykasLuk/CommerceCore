@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-7 p-5">
                 <h5 class="red-title">VARIANTS</h5>
-                <div class="variants bg-white p-3 rounded my-1">
+                <div class="variants bg-white p-3 rounded my-1 edit">
                     <table class="col-12 float-down">
                         <th>
                             <img class="mr-3" src="assets/1.png" /><strong
@@ -28,7 +28,7 @@
                             <th class="d-flex justify-content-end">
                                 <button
                                     id="delete"
-                                    class="delete btn btn-primary"
+                                    class="delete btn btn-primary btn-sm"
                                     v-on:click="deleteProduct(item.id)"
                                 >
                                     DELETE

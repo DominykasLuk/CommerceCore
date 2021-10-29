@@ -206,6 +206,11 @@ button.delete.btn.btn-primary.float-right {
     .security.d-flex.justify-content-center img{
         width: 50%;
     }
+    .variants.bg-white.p-3.rounded.my-1.edit strong,
+    .variants.bg-white.p-3.rounded.my-1.edit span {
+        
+        display: none;
+    }
 }
 
 button.accordion-button.position-relative {
