@@ -2640,10 +2640,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -38645,8 +38641,10 @@ var render = function () {
                 staticClass: "product-count",
                 attrs: { src: "assets/1.png" },
               }),
-              _c("strong", [_vm._v(_vm._s(_vm.resultCount) + "x ")]),
-              _c("span", { staticClass: "simple" }, [_vm._v("CoreProducts")]),
+              _vm._v(" "),
+              _c("span", [_vm._v(_vm._s(_vm.resultCount) + "x")]),
+              _vm._v(" "),
+              _c("span", { staticClass: "simple" }, [_vm._v("CoreProduct®")]),
             ]),
             _vm._v(" "),
             _vm._m(0),
@@ -38659,26 +38657,37 @@ var render = function () {
             { staticClass: "col-12 float-down" },
             _vm._l(_vm.list, function (item) {
               return _c("tr", { key: item.id }, [
-                _c("th", [
+                _c("th", { staticClass: "d-flex" }, [
                   _c("img", {
                     staticClass: "product-photo",
                     attrs: { src: "assets/2.png" },
                   }),
-                  _c("strong", [_vm._v("1x")]),
-                  _c("span", { staticClass: "simple" }, [
-                    _vm._v(_vm._s(item.name)),
-                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "d-flex align-items-center bit-up" },
+                    [
+                      _vm._v("1x "),
+                      _c("span", { staticClass: "simple bit-right" }, [
+                        _vm._v(_vm._s(item.name)),
+                      ]),
+                    ]
+                  ),
                 ]),
                 _vm._v(" "),
                 _c("th", { staticClass: "price text-right" }, [
-                  _vm._v("$" + _vm._s(item.price)),
+                  _c("div", { staticClass: "bit-up" }, [
+                    _vm._v("$" + _vm._s(item.price)),
+                  ]),
                 ]),
               ])
             }),
             0
           ),
           _vm._v(" "),
-          _vm._m(1),
+          _c("a", { staticClass: "btn btn-primary float-right" }, [
+            _vm._v("SAVE CHANGES"),
+          ]),
         ]),
         _vm._v(" "),
         _c("h5", { staticClass: "red-title" }, [
@@ -38700,7 +38709,7 @@ var render = function () {
           },
           [
             _c("div", { staticClass: "row" }, [
-              _vm._m(2),
+              _vm._m(1),
               _vm._v(" "),
               _c("div", { staticClass: "col-sm-6 mb-3" }, [
                 _c("input", {
@@ -39074,7 +39083,7 @@ var render = function () {
               ]),
             ]),
             _vm._v(" "),
-            _vm._m(3),
+            _vm._m(2),
             _vm._v(" "),
             _c(
               "div",
@@ -39085,7 +39094,7 @@ var render = function () {
               },
               [
                 _c("div", { staticClass: "accordion-item" }, [
-                  _vm._m(4),
+                  _vm._m(3),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -39287,7 +39296,7 @@ var render = function () {
                 )
               : _vm._e(),
             _vm._v(" "),
-            _vm._m(5),
+            _vm._m(4),
           ]
         ),
       ]),
@@ -39300,8 +39309,9 @@ var render = function () {
                 staticClass: "product-count-right",
                 attrs: { src: "assets/1.png" },
               }),
-              _c("strong", [_vm._v(_vm._s(_vm.resultCount) + "x ")]),
-              _c("span", { staticClass: "simple" }, [_vm._v("CoreProducts")]),
+              _vm._v(" "),
+              _c("span", [_vm._v(_vm._s(_vm.resultCount) + "x")]),
+              _c("span", { staticClass: "simple" }, [_vm._v("CoreProduct®")]),
             ]),
             _vm._v(" "),
             _c("th", {}, [
@@ -39330,7 +39340,7 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _vm._m(6),
+        _vm._m(5),
       ]),
     ]),
   ])
@@ -39346,14 +39356,6 @@ var staticRenderFns = [
         { staticClass: "red-title", attrs: { id: "change", href: "add" } },
         [_vm._v("Change")]
       ),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex justify-content-end" }, [
-      _c("a", { staticClass: "btn btn-primary" }, [_vm._v("SAVE CHANGES")]),
     ])
   },
   function () {

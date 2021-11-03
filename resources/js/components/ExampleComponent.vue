@@ -6,9 +6,9 @@
                 <div class="variants bg-white">
                     <table class="col-12 float-down">
                         <th>
-                            <img class="product-count" src="assets/1.png"/><strong
-                        >{{ resultCount }}x </strong
-                        ><span class="simple">CoreProducts</span>
+                            <img class="product-count" src="assets/1.png"/>
+                            <span>{{ resultCount }}x</span>
+                            <span class="simple">CoreProduct®</span>
                         </th>
                         <th class="text-right">
                             <a class="red-title" id="change" href="add"
@@ -18,18 +18,15 @@
                     <div class="line-left"></div>
                     <table class="col-12 float-down">
                         <tr v-for="item in list" v-bind:key="item.id">
-                            <th>
-                                <img class="product-photo" src="assets/2.png"/><strong
-                            >1x</strong
-                            ><span class="simple">{{ item.name }}</span>
+                            <th class="d-flex">
+                                <img class="product-photo" src="assets/2.png"/>
+                                 <div class="d-flex align-items-center bit-up">1x <span class="simple bit-right">{{ item.name }}</span></div>
                             </th>
-                            <th class="price text-right">${{ item.price }}</th>
+                            <th class="price text-right"><div class="bit-up">${{ item.price }}</div></th>
                         </tr>
                     </table>
 
-                    <div class="d-flex justify-content-end">
-                        <a class="btn btn-primary">SAVE CHANGES</a>
-                    </div>
+                    <a class="btn btn-primary float-right">SAVE CHANGES</a>
                 </div>
                 <h5 class="red-title">PAYMENT AND SHIPPING</h5>
                 <form
@@ -352,9 +349,8 @@
                 <table class="col-12 float-down">
                     <tr>
                         <th>
-                            <img class="product-count-right" src="assets/1.png"/><strong
-                        >{{ resultCount }}x </strong
-                        ><span class="simple">CoreProducts</span>
+                            <img class="product-count-right" src="assets/1.png"/>
+                            <span>{{ resultCount }}x</span><span class="simple">CoreProduct®</span>
                         </th>
                         <th class="">
                             <div class="d-flex justify-content-end">

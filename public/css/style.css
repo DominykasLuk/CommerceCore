@@ -20,16 +20,25 @@ th {
     padding: 0;
 }
 
+.simple {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.88rem;
+    line-height: 1.50rem;
+    color: #333333;
+}
+
 img.product-photo {
     margin-bottom: 0.44rem;
-    margin-right: 0.94rem;
 }
 
-img.product-count{
-    margin-right: 1.63rem;
+img.product-count {
+    margin-right: 0.63rem;
+    height: 2.50rem !important;
+    width: 2.50rem !important;
 }
 
-img.product-count-right{
+img.product-count-right {
     width: 4.50rem;
     height: 4.50rem;
     margin-right: 0.88rem;
@@ -37,26 +46,14 @@ img.product-count-right{
 
 .col-md-7 {
     background: #F8F1EB;
-    padding: 4.19rem 5.88rem 8.06rem 7.3rem;
+    padding-top: 4.25rem;
+    padding-bottom: 8.06rem;
 }
 
 .col-md-5.bg-white {
-    padding-left: 5.88rem;
-    padding-right: 7.50rem;
-    padding-top: 5.50rem;
+
 }
 
-@media (min-width: 768px) {
-    .col-md-7 {
-        flex: 0 0 59.16666666666667%;
-        max-width: 59.16666666666667%;
-    }
-
-    .col-md-5 {
-        flex: 0 0 40.83333333333333%;
-        max-width: 40.83333333333333%;
-    }
-}
 
 @media (min-width: 1200px) {
     .container-xl, .container-lg, .container-md, .container-sm, .container {
@@ -64,18 +61,35 @@ img.product-count-right{
     }
 }
 
+
+.d-flex.align-items-center.bit-up {
+    padding-left: 0.94rem;
+}
+
+span.simple.bit-right {
+    padding-left: 2px;
+}
+
+.bit-up {
+    padding-bottom: 0.7rem;
+    padding-right: 0.31rem;
+}
+
 .variants.bg-white {
-    width: 100%;
+    height: 19.88rem;
+    max-width: 40rem;
     padding: 1rem 1.5rem 1.5rem;
-    margin-bottom: 2.09rem;
+    margin: auto auto 2.09em;
     border: 1px solid #E9D6C5;
     box-sizing: border-box;
     border-radius: 6px;
+    position: relative;
 }
 
 form.needs-validation.bg-white {
-    width: 100%;
+    max-width: 40rem;
     padding: 1rem 1.5rem 1.5rem;
+    margin: 0 auto;
     border: 1px solid #E9D6C5;
     box-sizing: border-box;
     border-radius: 6px;
@@ -111,7 +125,7 @@ table.table tr {
     margin-bottom: 1.06rem;
 }
 
-.return-box{
+.return-box {
     width: 100%;
     border: 1px solid #E0E0E0;
     box-sizing: border-box;
@@ -120,26 +134,28 @@ table.table tr {
     margin-top: 1.63rem;
 }
 
-.return-img{
+.return-img {
     margin-right: 1.50rem;
     margin-bottom: 1.00rem;
 }
 
-.btn.btn-primary {
+a.btn.btn-primary.float-right {
     background-color: #DC624E !important;
     border: 1px solid #DC624E !important;
-    box-shadow: 0px 4px 10px rgba(67, 40, 16, 0.24);
-
+    box-shadow: 0px 4px 10px rgb(67 40 16 / 24%);
     border-radius: 3px;
     font-size: 0.88rem;
     font-weight: 900;
     line-height: 24px;
-
-    padding: 0.75rem 2.75rem 0.75rem 2.81rem;
-
     text-align: center;
     letter-spacing: 0.07em;
     text-transform: uppercase;
+    padding-top: 0.75rem;
+    width: 12.69rem;
+    height: 3rem;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
 }
 
 .btn-lg, .btn-group-lg > .btn {
@@ -226,53 +242,14 @@ p.customer-info {
 }
 
 h5.red-title {
-    color: #DC624E;
-    font-weight: 700;
-    font-size: 12px;
-}
-
-.square {
-    height: 40px;
-    width: 40px;
-    background-color: #F8F1EB;
-}
-
-.square img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.float-down .float-right {
-    position: relative;
-    top: 8px;
-}
-
-.pt-5 {
-    padding-top: 6rem !important;
-}
-
-th.total {
-    font-weight: 400;
-    font-size: 18px;
-    color: #828282;
-}
-
-span.usd {
-    font-weight: 500;
-    font-size: 12px;
-    color: #000;
-}
-
-.price{
     font-style: normal;
-    font-weight: 900;
-    font-size: 0.88rem;
+    font-weight: bold;
+    font-size: 0.75rem;
     line-height: 24px;
-}
-strong.price {
-    font-weight: 700;
-    margin-left: 10px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #DC624E;
+    margin: 0;
 }
 
 a.red-title {
@@ -283,21 +260,6 @@ a.red-title {
     text-align: right;
     color: #DC624E;
 }
-
-span.simple {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.88rem;
-    line-height: 24px;
-    text-align: center;
-    color: #333333;
-}
-
-
-table.col-12.float-down td {
-    position: relative;
-}
-
 
 button.delete.btn.btn-primary.float-right {
     position: absolute;
@@ -348,4 +310,16 @@ button.accordion-button.position-relative {
 
 #yes:checked {
     background-color: #DC624E;
+}
+
+@media (min-width: 768px) {
+    .col-md-7 {
+        flex: 0 0 59.16666666666667%;
+        max-width: 59.16666666666667%;
+    }
+
+    .col-md-5 {
+        flex: 0 0 40.83333333333333%;
+        max-width: 40.83333333333333%;
+    }
 }
