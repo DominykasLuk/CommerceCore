@@ -107,7 +107,7 @@ export default {
             formData: {
                 name: null,
                 price: null,
-            
+
             },
         };
     },
@@ -122,7 +122,7 @@ export default {
             });
             return total;
         }
-    
+
     },
     methods: {
         getData() {

@@ -2644,15 +2644,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -38644,14 +38635,14 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-7 p-5" }, [
+      _c("div", { staticClass: "col-md-7" }, [
         _c("h5", { staticClass: "red-title" }, [_vm._v("VARIANTS")]),
         _vm._v(" "),
-        _c("div", { staticClass: "variants bg-white p-3 rounded my-1" }, [
+        _c("div", { staticClass: "variants bg-white" }, [
           _c("table", { staticClass: "col-12 float-down" }, [
             _c("th", [
               _c("img", {
-                staticClass: "mr-3",
+                staticClass: "product-count",
                 attrs: { src: "assets/1.png" },
               }),
               _c("strong", [_vm._v(_vm._s(_vm.resultCount) + "x ")]),
@@ -38661,7 +38652,7 @@ var render = function () {
             _vm._m(0),
           ]),
           _vm._v(" "),
-          _c("hr", { staticClass: "line" }),
+          _c("div", { staticClass: "line-left" }),
           _vm._v(" "),
           _c(
             "table",
@@ -38670,7 +38661,7 @@ var render = function () {
               return _c("tr", { key: item.id }, [
                 _c("th", [
                   _c("img", {
-                    staticClass: "mr-3",
+                    staticClass: "product-photo",
                     attrs: { src: "assets/2.png" },
                   }),
                   _c("strong", [_vm._v("1x")]),
@@ -38679,7 +38670,7 @@ var render = function () {
                   ]),
                 ]),
                 _vm._v(" "),
-                _c("th", { staticClass: "float-right" }, [
+                _c("th", { staticClass: "price text-right" }, [
                   _vm._v("$" + _vm._s(item.price)),
                 ]),
               ])
@@ -38687,17 +38678,17 @@ var render = function () {
             0
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "d-flex justify-content-end" }),
+          _vm._m(1),
         ]),
         _vm._v(" "),
-        _c("h5", { staticClass: "red-title mt-4" }, [
+        _c("h5", { staticClass: "red-title" }, [
           _vm._v("PAYMENT AND SHIPPING"),
         ]),
         _vm._v(" "),
         _c(
           "form",
           {
-            staticClass: "needs-validation p-3 bg-white rounded my-1",
+            staticClass: "needs-validation bg-white",
             attrs: { method: "post", novalidate: "novalidate" },
             on: {
               submit: function ($event) {
@@ -38709,7 +38700,7 @@ var render = function () {
           },
           [
             _c("div", { staticClass: "row" }, [
-              _vm._m(1),
+              _vm._m(2),
               _vm._v(" "),
               _c("div", { staticClass: "col-sm-6 mb-3" }, [
                 _c("input", {
@@ -39083,7 +39074,7 @@ var render = function () {
               ]),
             ]),
             _vm._v(" "),
-            _vm._m(2),
+            _vm._m(3),
             _vm._v(" "),
             _c(
               "div",
@@ -39094,7 +39085,7 @@ var render = function () {
               },
               [
                 _c("div", { staticClass: "accordion-item" }, [
-                  _vm._m(3),
+                  _vm._m(4),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -39296,46 +39287,50 @@ var render = function () {
                 )
               : _vm._e(),
             _vm._v(" "),
-            _vm._m(4),
+            _vm._m(5),
           ]
         ),
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-5 bg-white p-5 pt-5" }, [
+      _c("div", { staticClass: "col-md-5 bg-white" }, [
         _c("table", { staticClass: "col-12 float-down" }, [
           _c("tr", [
             _c("th", [
               _c("img", {
-                staticClass: "mr-3",
+                staticClass: "product-count-right",
                 attrs: { src: "assets/1.png" },
               }),
               _c("strong", [_vm._v(_vm._s(_vm.resultCount) + "x ")]),
               _c("span", { staticClass: "simple" }, [_vm._v("CoreProducts")]),
             ]),
             _vm._v(" "),
-            _c("th", { staticClass: "float-right" }, [
-              _c("strong", [_vm._v("$" + _vm._s(_vm.total))]),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("hr", { staticClass: "line" }),
-        _vm._v(" "),
-        _c("table", { staticClass: "col-12" }, [
-          _c("tr", [
-            _c("th", { staticClass: "total" }, [_vm._v("Total:")]),
-            _vm._v(" "),
-            _c("th", { staticClass: "float-right" }, [
-              _c("span", { staticClass: "usd" }, [_vm._v("USD")]),
-              _vm._v(" "),
-              _c("strong", { staticClass: "price" }, [
-                _vm._v("$" + _vm._s(_vm.total)),
+            _c("th", {}, [
+              _c("div", { staticClass: "d-flex justify-content-end" }, [
+                _c("strong", [_vm._v("$" + _vm._s(_vm.total))]),
               ]),
             ]),
           ]),
         ]),
         _vm._v(" "),
-        _vm._m(5),
+        _c("div", { staticClass: "line" }),
+        _vm._v(" "),
+        _c("table", { staticClass: "col-12" }, [
+          _c("tr", [
+            _c("th", { staticClass: "total" }, [_vm._v("Total:")]),
+            _vm._v(" "),
+            _c("th", [
+              _c("div", { staticClass: "d-flex justify-content-end" }, [
+                _c("span", { staticClass: "usd" }, [_vm._v("USD")]),
+                _vm._v(" "),
+                _c("strong", { staticClass: "price" }, [
+                  _vm._v("$" + _vm._s(_vm.total)),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _vm._m(6),
       ]),
     ]),
   ])
@@ -39345,12 +39340,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("th", { staticClass: "float-right" }, [
+    return _c("th", { staticClass: "text-right" }, [
       _c(
         "a",
         { staticClass: "red-title", attrs: { id: "change", href: "add" } },
         [_vm._v("Change")]
       ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex justify-content-end" }, [
+      _c("a", { staticClass: "btn btn-primary" }, [_vm._v("SAVE CHANGES")]),
     ])
   },
   function () {
@@ -39408,7 +39411,7 @@ var staticRenderFns = [
               _c("input", { attrs: { id: "yes", type: "radio", name: "s" } }),
             ]),
             _vm._v(
-              "    \n                                Credit Card\n                                "
+              "\n                                Credit Card\n                                "
             ),
             _c("img", {
               staticClass: "position-absolute",
@@ -39442,27 +39445,21 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "\n                    border\n                    d-flex\n                    justify-content-center\n                    align-content-center\n                    flex-column\n                    p-4\n                    rounded\n                    mt-3\n                ",
-      },
-      [
-        _c("div", { staticClass: "d-flex align-items-center" }, [
-          _c("img", { attrs: { src: "assets/Return.png" } }),
-          _c("strong", { staticClass: "ml-2" }, [
-            _vm._v("60-day fit guarantee"),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "\n                    Either it doesn’t fit or simply you don’t like it You\n                    can return it within 60 days for a full refund. No\n                    questions asked.\n                "
-          ),
-        ]),
-      ]
-    )
+    return _c("div", { staticClass: "return-box" }, [
+      _c("div", { staticClass: "d-flex align-items-center" }, [
+        _c("img", {
+          staticClass: "return-img",
+          attrs: { src: "assets/Return.png" },
+        }),
+        _c("strong", [_vm._v("60-day fit guarantee")]),
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n                    Either it doesn’t fit or simply you don’t like it You\n                    can return it within 60 days for a full refund. No\n                    questions asked.\n                "
+        ),
+      ]),
+    ])
   },
 ]
 render._withStripped = true
@@ -51635,7 +51632,7 @@ Vue.compile = compileToFunctions;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_args":[["axios@0.21.4","C:\\\\xampp\\\\htdocs\\\\test"]],"_development":true,"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_spec":"0.21.4","_where":"C:\\\\xampp\\\\htdocs\\\\test","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"_args":[["axios@0.21.4","C:\\\\xampp\\\\htdocs\\\\CommerceCore"]],"_development":true,"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_spec":"0.21.4","_where":"C:\\\\xampp\\\\htdocs\\\\CommerceCore","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 

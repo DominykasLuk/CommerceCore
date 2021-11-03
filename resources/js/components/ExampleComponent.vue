@@ -1,39 +1,39 @@
 <template xmlns:sv-bind="http://www.w3.org/1999/xhtml">
     <div class="container">
         <div class="row">
-            <div class="col-md-7 p-5">
+            <div class="col-md-7">
                 <h5 class="red-title">VARIANTS</h5>
-                <div class="variants bg-white p-3 rounded my-1">
+                <div class="variants bg-white">
                     <table class="col-12 float-down">
                         <th>
-                            <img class="mr-3" src="assets/1.png" /><strong
-                                >{{ resultCount }}x </strong
-                            ><span class="simple">CoreProducts</span>
+                            <img class="product-count" src="assets/1.png"/><strong
+                        >{{ resultCount }}x </strong
+                        ><span class="simple">CoreProducts</span>
                         </th>
-                        <th class="float-right">
+                        <th class="text-right">
                             <a class="red-title" id="change" href="add"
-                                >Change</a
-                            >
+                            >Change</a>
                         </th>
                     </table>
-                    <hr class="line" />
+                    <div class="line-left"></div>
                     <table class="col-12 float-down">
                         <tr v-for="item in list" v-bind:key="item.id">
                             <th>
-                                <img class="mr-3" src="assets/2.png" /><strong
-                                    >1x</strong
-                                ><span class="simple">{{ item.name }}</span>
+                                <img class="product-photo" src="assets/2.png"/><strong
+                            >1x</strong
+                            ><span class="simple">{{ item.name }}</span>
                             </th>
-                            <th class="float-right">${{ item.price }}</th>
+                            <th class="price text-right">${{ item.price }}</th>
                         </tr>
                     </table>
 
-                    <div class="d-flex justify-content-end"></div>
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-primary">SAVE CHANGES</a>
+                    </div>
                 </div>
-
-                <h5 class="red-title mt-4">PAYMENT AND SHIPPING</h5>
+                <h5 class="red-title">PAYMENT AND SHIPPING</h5>
                 <form
-                    class="needs-validation p-3 bg-white rounded my-1"
+                    class="needs-validation bg-white"
                     @submit.prevent="storeCheckout"
                     method="post"
                     @keydown="clearError"
@@ -104,7 +104,7 @@
 
                     <div class="mb-3">
                         <label for="address" class="address"
-                            >Shipping Address</label
+                        >Shipping Address</label
                         >
                         <input
                             type="text"
@@ -202,7 +202,7 @@
                     <div class="method-desc">
                         <h5>Payment Method</h5>
                         <p>
-                            <img src="assets/CheckOVal.png" />All Transactions
+                            <img src="assets/CheckOVal.png"/>All Transactions
                             are secure and encrypted
                         </p>
                     </div>
@@ -225,9 +225,9 @@
                                     aria-expanded="true"
                                     aria-controls="panelsStayOpen-collapseOne"
                                 >
-                                <div class="radio">
-                                    <input id="yes" type="radio" name="s">
-                                </div>    
+                                    <div class="radio">
+                                        <input id="yes" type="radio" name="s">
+                                    </div>
                                     Credit Card
                                     <img
                                         class="position-absolute"
@@ -340,53 +340,44 @@
                         <strong>Error!</strong> There was an error
                     </div>
                     <div class="security d-flex justify-content-center">
-                        <img src="/assets/NortonSecure.png" />
-                        <img src="/assets/VeriSign.png" />
-                        <img src="/assets/McAfee.png" />
-                        <img src="/assets/Comodo.png" />
+                        <img src="/assets/NortonSecure.png"/>
+                        <img src="/assets/VeriSign.png"/>
+                        <img src="/assets/McAfee.png"/>
+                        <img src="/assets/Comodo.png"/>
                     </div>
                 </form>
             </div>
 
-            <div class="col-md-5 bg-white p-5 pt-5">
+            <div class="col-md-5 bg-white">
                 <table class="col-12 float-down">
                     <tr>
                         <th>
-                            <img class="mr-3" src="assets/1.png" /><strong
-                                >{{ resultCount }}x </strong
-                            ><span class="simple">CoreProducts</span>
+                            <img class="product-count-right" src="assets/1.png"/><strong
+                        >{{ resultCount }}x </strong
+                        ><span class="simple">CoreProducts</span>
                         </th>
-                        <th class="float-right">
-                            <strong>${{ total }}</strong>
+                        <th class="">
+                            <div class="d-flex justify-content-end">
+                                <strong>${{ total }}</strong>
+                            </div>
                         </th>
                     </tr>
                 </table>
-                <hr class="line" />
+                <div class="line"></div>
                 <table class="col-12">
                     <tr>
                         <th class="total">Total:</th>
-                        <th class="float-right">
-                            <span class="usd">USD</span>
-                            <strong class="price">${{ total }}</strong>
+                        <th>
+                            <div class="d-flex justify-content-end">
+                                <span class="usd">USD</span>
+                                <strong class="price">${{ total }}</strong>
+                            </div>
                         </th>
                     </tr>
                 </table>
-                <div
-                    class="
-                        border
-                        d-flex
-                        justify-content-center
-                        align-content-center
-                        flex-column
-                        p-4
-                        rounded
-                        mt-3
-                    "
-                >
+                <div class="return-box">
                     <div class="d-flex align-items-center">
-                        <img src="assets/Return.png" /><strong class="ml-2"
-                            >60-day fit guarantee</strong
-                        >
+                        <img class="return-img" src="assets/Return.png"/><strong>60-day fit guarantee</strong>
                     </div>
                     <p>
                         Either it doesn’t fit or simply you don’t like it You
