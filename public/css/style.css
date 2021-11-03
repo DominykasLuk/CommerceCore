@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -46,8 +48,10 @@ img.product-count-right {
 
 .col-md-7 {
     background: #F8F1EB;
-    padding-top: 4.25rem;
+    padding-top: 5.75rem;
     padding-bottom: 8.06rem;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .col-md-5.bg-white {
@@ -79,7 +83,7 @@ span.simple.bit-right {
     height: 19.88rem;
     max-width: 40rem;
     padding: 1rem 1.5rem 1.5rem;
-    margin: auto auto 2.09em;
+    margin: auto auto 3.50rem;
     border: 1px solid #E9D6C5;
     box-sizing: border-box;
     border-radius: 6px;
@@ -88,11 +92,35 @@ span.simple.bit-right {
 
 form.needs-validation.bg-white {
     max-width: 40rem;
-    padding: 1rem 1.5rem 1.5rem;
+    padding: 1rem 1.5rem 1.31rem 1.50rem;
     margin: 0 auto;
     border: 1px solid #E9D6C5;
     box-sizing: border-box;
     border-radius: 6px;
+    height: 54.13rem;
+}
+
+.method-desc h5 {
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.88rem;
+    line-height: 140%;
+    color: #333333;
+    margin-bottom: 0.25rem;
+}
+
+.method-desc.bottom h5 {
+    margin-top: 0.56rem;
+    margin-bottom: 0.31rem;
+}
+
+.method-desc p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.00rem;
+    color: #BDBDBD;
 }
 
 .accordion-button::after {
@@ -190,40 +218,77 @@ input[type="radio"] {
 }
 
 .accordion-body {
+    height: 9.13rem;
     background-color: #FAFAFA;
-}
-
-.method-desc h5 {
-    font-weight: 500;
-}
-
-.method-desc p {
-    font-weight: 400;
-    color: #BDBDBD;
 }
 
 .method-desc img {
     margin-right: 5px;
 }
 
+input#email {
+    margin-top: 1rem;
+}
+
+label.address {
+    margin-top: 1.13rem;
+    margin-bottom: 1rem;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.88rem;
+    line-height: 140%;
+    color: #333333;
+}
+
+input#address {
+    margin-bottom: 1rem;
+}
+
+.col-sm-4 span {
+    position: absolute;
+    left: 1.50rem;
+    top: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.00rem;
+    color: #828282;
+}
+
+input#city {
+    margin-bottom: 1rem;
+}
+
+input#cc-number {
+    margin-bottom: 1rem;
+}
+
+select#country,
+select#state {
+    padding-top: 20px;
+}
+
 input#firstName,
 input#lastName,
-input#remail,
+input#email,
 input#address,
 input#city,
 select#country,
 select#state,
-input#zip {
+input#zip,
+input#cc-number,
+input#cc-expiration,
+input#cc-cvv {
+    height: 48px;
 }
 
-.col-sm-4.mb-3 span {
-    position: absolute;
-    left: 24px;
+.col-sm-3.expiration {
+    padding-right: 0;
 }
 
-.country option {
-    position: relative;
-    top: 5px;
+.col-sm-3.cvv {
+    padding-left: 1rem;
 }
 
 span.select {
@@ -231,14 +296,25 @@ span.select {
     bottom: 1px;
 }
 
-label.address {
+p.customer-info {
     font-weight: 500;
     font-size: 14px;
 }
 
-p.customer-info {
-    font-weight: 500;
-    font-size: 14px;
+button.btn.btn-primary.btn-lg.btn-block.my-3 {
+    background-color: #DC624E !important;
+    border: 1px solid #DC624E !important;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 0.88rem;
+    line-height: 1.50rem;
+    /* identical to box height, or 171% */
+
+    height: 3.50rem;
+
+    text-align: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
 }
 
 h5.red-title {
@@ -250,6 +326,19 @@ h5.red-title {
     text-transform: uppercase;
     color: #DC624E;
     margin: 0;
+
+}
+
+h5.red-title.top {
+    position: absolute;
+    top: -1.56rem;
+    left: 0;
+}
+
+h5.red-title.bottom {
+    position: absolute;
+    left: 0;
+    top: -1.56rem;
 }
 
 a.red-title {
@@ -323,3 +412,12 @@ button.accordion-button.position-relative {
         max-width: 40.83333333333333%;
     }
 }
+
+@media (max-width: 576px) {
+    select#country,
+    select#state,
+    input#zip {
+        margin-bottom: 1rem;
+    }
+}
+

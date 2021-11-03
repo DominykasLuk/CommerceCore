@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-                <h5 class="red-title">VARIANTS</h5>
                 <div class="variants bg-white">
+                    <h5 class="red-title top">VARIANTS</h5>
                     <table class="col-12 float-down">
                         <th>
                             <img class="product-count" src="assets/1.png"/>
@@ -20,22 +20,26 @@
                         <tr v-for="item in list" v-bind:key="item.id">
                             <th class="d-flex">
                                 <img class="product-photo" src="assets/2.png"/>
-                                 <div class="d-flex align-items-center bit-up">1x <span class="simple bit-right">{{ item.name }}</span></div>
+                                <div class="d-flex align-items-center bit-up">1x <span
+                                    class="simple bit-right">{{ item.name }}</span></div>
                             </th>
-                            <th class="price text-right"><div class="bit-up">${{ item.price }}</div></th>
+                            <th class="price text-right">
+                                <div class="bit-up">${{ item.price }}</div>
+                            </th>
                         </tr>
                     </table>
 
                     <a class="btn btn-primary float-right">SAVE CHANGES</a>
                 </div>
-                <h5 class="red-title">PAYMENT AND SHIPPING</h5>
                 <form
-                    class="needs-validation bg-white"
+                    class="needs-validation bg-white position-relative"
                     @submit.prevent="storeCheckout"
                     method="post"
                     @keydown="clearError"
                     novalidate="novalidate"
                 >
+                    <h5 class="red-title bottom">PAYMENT AND SHIPPING</h5>
+
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="method-desc">
@@ -43,7 +47,7 @@
                                 <p>Fields marked as (*) are required.</p>
                             </div>
                         </div>
-                        <div class="col-sm-6 mb-3">
+                        <div class="col-sm-6">
                             <input
                                 type="text"
                                 class="form-control"
@@ -62,7 +66,7 @@
                                 {{ getError("fname") }}
                             </div>
                         </div>
-                        <div class="col-sm-6 mb-3">
+                        <div class="col-sm-6">
                             <input
                                 type="text"
                                 class="form-control"
@@ -83,7 +87,7 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="">
                         <input
                             type="email"
                             class="form-control"
@@ -99,7 +103,7 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="">
                         <label for="address" class="address"
                         >Shipping Address</label
                         >
@@ -120,7 +124,7 @@
                             {{ getError("address") }}
                         </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="">
                         <input
                             type="text"
                             class="form-control"
@@ -136,7 +140,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-4 mb-3">
+                        <div class="col-sm-4">
                             <span>*Country</span>
                             <select
                                 class="custom-select country d-block w-100"
@@ -146,7 +150,7 @@
                                 required
                                 :class="hasError('country') ? 'is-invalid' : ''"
                             >
-                                <option class="option" value=""></option>
+                                <option selected>Select</option>
                                 <option>United States</option>
                             </select>
                             <div
@@ -156,7 +160,7 @@
                                 {{ getError("country") }}
                             </div>
                         </div>
-                        <div class="col-sm-4 mb-3">
+                        <div class="col-sm-4">
                             <span>*State</span>
                             <select
                                 :class="hasError('state') ? 'is-invalid' : ''"
@@ -166,7 +170,7 @@
                                 v-model="formData.state"
                                 required
                             >
-                                <option class="option" value=""></option>
+                                <option selected>Select</option>
                                 <option>California</option>
                             </select>
                             <div
@@ -176,7 +180,7 @@
                                 {{ getError("state") }}
                             </div>
                         </div>
-                        <div class="col-sm-4 mb-3">
+                        <div class="col-sm-4">
                             <input
                                 :class="hasError('zip') ? 'is-invalid' : ''"
                                 type="text"
@@ -196,7 +200,7 @@
                         </div>
                     </div>
 
-                    <div class="method-desc">
+                    <div class="method-desc bottom">
                         <h5>Payment Method</h5>
                         <p>
                             <img src="assets/CheckOVal.png"/>All Transactions
@@ -240,7 +244,7 @@
                             >
                                 <div class="accordion-body">
                                     <div class="row">
-                                        <div class="col-sm-12 mb-3">
+                                        <div class="col-sm-12">
                                             <input
                                                 :class="
                                                     hasError('cc_number')
@@ -264,7 +268,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-3 mb-3">
+                                        <div class="col-sm-3 expiration">
                                             <input
                                                 :class="
                                                     hasError('cc_expiration')
@@ -285,7 +289,9 @@
                                                 {{ getError("cc_expiration") }}
                                             </div>
                                         </div>
-                                        <div class="col-sm-3 mb-3">
+
+
+                                        <div class="col-sm-3 cvv">
                                             <div class="position-relative">
                                                 <input
                                                     :class="

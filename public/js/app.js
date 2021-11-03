@@ -2640,6 +2640,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -38632,9 +38638,9 @@ var render = function () {
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-md-7" }, [
-        _c("h5", { staticClass: "red-title" }, [_vm._v("VARIANTS")]),
-        _vm._v(" "),
         _c("div", { staticClass: "variants bg-white" }, [
+          _c("h5", { staticClass: "red-title top" }, [_vm._v("VARIANTS")]),
+          _vm._v(" "),
           _c("table", { staticClass: "col-12 float-down" }, [
             _c("th", [
               _c("img", {
@@ -38690,14 +38696,10 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _c("h5", { staticClass: "red-title" }, [
-          _vm._v("PAYMENT AND SHIPPING"),
-        ]),
-        _vm._v(" "),
         _c(
           "form",
           {
-            staticClass: "needs-validation bg-white",
+            staticClass: "needs-validation bg-white position-relative",
             attrs: { method: "post", novalidate: "novalidate" },
             on: {
               submit: function ($event) {
@@ -38708,10 +38710,14 @@ var render = function () {
             },
           },
           [
+            _c("h5", { staticClass: "red-title bottom" }, [
+              _vm._v("PAYMENT AND SHIPPING"),
+            ]),
+            _vm._v(" "),
             _c("div", { staticClass: "row" }, [
               _vm._m(1),
               _vm._v(" "),
-              _c("div", { staticClass: "col-sm-6 mb-3" }, [
+              _c("div", { staticClass: "col-sm-6" }, [
                 _c("input", {
                   directives: [
                     {
@@ -38753,7 +38759,7 @@ var render = function () {
                   : _vm._e(),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-sm-6 mb-3" }, [
+              _c("div", { staticClass: "col-sm-6" }, [
                 _c("input", {
                   directives: [
                     {
@@ -38796,7 +38802,7 @@ var render = function () {
               ]),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "mb-3" }, [
+            _c("div", {}, [
               _c("input", {
                 directives: [
                   {
@@ -38837,7 +38843,7 @@ var render = function () {
                 : _vm._e(),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "mb-3" }, [
+            _c("div", {}, [
               _c(
                 "label",
                 { staticClass: "address", attrs: { for: "address" } },
@@ -38884,7 +38890,7 @@ var render = function () {
                 : _vm._e(),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "mb-3" }, [
+            _c("div", {}, [
               _c("input", {
                 directives: [
                   {
@@ -38925,7 +38931,7 @@ var render = function () {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-sm-4 mb-3" }, [
+              _c("div", { staticClass: "col-sm-4" }, [
                 _c("span", [_vm._v("*Country")]),
                 _vm._v(" "),
                 _c(
@@ -38963,10 +38969,9 @@ var render = function () {
                     },
                   },
                   [
-                    _c("option", {
-                      staticClass: "option",
-                      attrs: { value: "" },
-                    }),
+                    _c("option", { attrs: { selected: "" } }, [
+                      _vm._v("Select"),
+                    ]),
                     _vm._v(" "),
                     _c("option", [_vm._v("United States")]),
                   ]
@@ -38983,7 +38988,7 @@ var render = function () {
                   : _vm._e(),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-sm-4 mb-3" }, [
+              _c("div", { staticClass: "col-sm-4" }, [
                 _c("span", [_vm._v("*State")]),
                 _vm._v(" "),
                 _c(
@@ -39021,10 +39026,9 @@ var render = function () {
                     },
                   },
                   [
-                    _c("option", {
-                      staticClass: "option",
-                      attrs: { value: "" },
-                    }),
+                    _c("option", { attrs: { selected: "" } }, [
+                      _vm._v("Select"),
+                    ]),
                     _vm._v(" "),
                     _c("option", [_vm._v("California")]),
                   ]
@@ -39041,7 +39045,7 @@ var render = function () {
                   : _vm._e(),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-sm-4 mb-3" }, [
+              _c("div", { staticClass: "col-sm-4" }, [
                 _c("input", {
                   directives: [
                     {
@@ -39108,7 +39112,7 @@ var render = function () {
                     [
                       _c("div", { staticClass: "accordion-body" }, [
                         _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "col-sm-12 mb-3" }, [
+                          _c("div", { staticClass: "col-sm-12" }, [
                             _c("input", {
                               directives: [
                                 {
@@ -39157,7 +39161,7 @@ var render = function () {
                         ]),
                         _vm._v(" "),
                         _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "col-sm-3 mb-3" }, [
+                          _c("div", { staticClass: "col-sm-3 expiration" }, [
                             _c("input", {
                               directives: [
                                 {
@@ -39203,7 +39207,7 @@ var render = function () {
                               : _vm._e(),
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "col-sm-3 mb-3" }, [
+                          _c("div", { staticClass: "col-sm-3 cvv" }, [
                             _c("div", { staticClass: "position-relative" }, [
                               _c("input", {
                                 directives: [
@@ -39374,7 +39378,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "method-desc" }, [
+    return _c("div", { staticClass: "method-desc bottom" }, [
       _c("h5", [_vm._v("Payment Method")]),
       _vm._v(" "),
       _c("p", [
