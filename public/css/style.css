@@ -522,6 +522,17 @@ button.accordion-button.position-relative {
     margin: auto;
 }
 
+.custom-select {
+    background: none;
+}
+
+.country-input img,
+.state-input img {
+    position: absolute;
+    right: 12px;
+    top: 16px;
+}
+
 #yes {
     border: 2px solid white;
     box-shadow: 0 0 0 1px #DC624E;
@@ -539,12 +550,14 @@ button.accordion-button.position-relative {
 #yes:checked {
     background-color: #DC624E;
 }
+
 @media (min-width: 1200px) {
-    .col-md-7{
+    .col-md-7 {
         padding-left: 0;
         padding-right: 0;
     }
-    .col-md-5.bg-white{
+
+    .col-md-5.bg-white {
         padding-left: 0;
         padding-right: 0;
     }

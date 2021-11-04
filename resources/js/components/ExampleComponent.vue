@@ -124,7 +124,8 @@
                     </div>
 
                     <div class="d-flex justify-content-between">
-                        <div class="country-input">
+                        <div class="country-input position-relative">
+                            <img src="assets/ChevronDown.png">
                             <span>*Country</span>
                             <select
                                 class="country d-block custom-select"
@@ -139,7 +140,8 @@
                             </select>
 
                         </div>
-                        <div class="state-input">
+                        <div class="state-input position-relative">
+                            <img src="assets/ChevronDown.png">
                             <span>*Region/State</span>
                             <select
                                 :class="hasError('state') ? 'is-invalid' : ''"

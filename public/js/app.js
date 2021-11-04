@@ -2596,6 +2596,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -38829,7 +38831,9 @@ var render = function () {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex justify-content-between" }, [
-              _c("div", { staticClass: "country-input" }, [
+              _c("div", { staticClass: "country-input position-relative" }, [
+                _c("img", { attrs: { src: "assets/ChevronDown.png" } }),
+                _vm._v(" "),
                 _c("span", [_vm._v("*Country")]),
                 _vm._v(" "),
                 _c(
@@ -38876,7 +38880,9 @@ var render = function () {
                 ),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "state-input" }, [
+              _c("div", { staticClass: "state-input position-relative" }, [
+                _c("img", { attrs: { src: "assets/ChevronDown.png" } }),
+                _vm._v(" "),
                 _c("span", [_vm._v("*Region/State")]),
                 _vm._v(" "),
                 _c(
