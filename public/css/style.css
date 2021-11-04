@@ -33,24 +33,24 @@ th {
 .simple-right {
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.50rem;
     color: #333333;
 }
 
 span.count-top {
     font-style: normal;
     font-weight: 900;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.50rem;
     color: #333333;
 }
 
 th.total {
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.13rem;
+    line-height: 1.50rem;
     color: #828282;
     position: relative;
     top: 5px;
@@ -59,8 +59,8 @@ th.total {
 span.price-big {
     font-style: normal;
     font-weight: 900;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 1.50rem;
+    line-height: 1.75rem;
     text-align: right;
     color: #333333;
 }
@@ -69,8 +69,8 @@ span.price-big::before {
     content: 'USD';
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 0.75rem;
+    line-height: 1rem;
     color: #000000;
     margin-right: 7px;
 }
@@ -97,46 +97,13 @@ img.product-count-right {
 }
 
 .col-md-5.bg-white {
-    padding-top: 88px;
-    padding-bottom: 88px;
+    padding-top: 5.50rem;
+    padding-bottom: 5.50rem;
 }
 
 .was-validated .custom-select:invalid, .custom-select.is-invalid {
     background: none;
 }
-
-
-@media (min-width: 1200px) {
-    .container-xl, .container-lg, .container-md, .container-sm, .container {
-        max-width: 1440px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .names.d-flex.justify-content-between {
-        gap: 10px;
-    }
-
-    .inputs.d-flex.justify-content-between {
-        gap: 10px;
-    }
-}
-
-@media (max-width: 576px) {
-    .inputs.d-flex.justify-content-between,
-    .names.d-flex.justify-content-between {
-        flex-direction: column;
-    }
-
-    .form-control,
-    .fname-input,
-    .lname-input,
-    .country-input,
-    .state-input {
-        width: 100% !important;
-    }
-}
-
 
 .d-flex.align-items-center.bit-up {
     padding-left: 0.94rem;
@@ -220,7 +187,7 @@ table.table tr {
 
 .line-left {
     background: #F2F2F2;
-    border-radius: 0px;
+    border-radius: 0;
     height: 1px;
     width: 100%;
     margin-top: 1rem;
@@ -229,7 +196,7 @@ table.table tr {
 
 .line {
     background: #F2F2F2;
-    border-radius: 0px;
+    border-radius: 0;
     height: 1px;
     width: 100%;
     margin-top: 1.69rem;
@@ -237,7 +204,7 @@ table.table tr {
 }
 
 .return-box {
-    height: 172px;
+    max-height: 10.75rem;
     width: 100%;
     border: 1px solid #E0E0E0;
     box-sizing: border-box;
@@ -249,7 +216,7 @@ table.table tr {
 .return-box p {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 0.88rem;
     line-height: 140%;
     color: #828282;
 }
@@ -257,8 +224,8 @@ table.table tr {
 .d-flex.align-items-center.return-text p {
     font-style: normal;
     font-weight: 900;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: #333333;
     text-transform: uppercase;
 }
@@ -266,8 +233,8 @@ table.table tr {
 span.price-top {
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+    line-height: 1.63rem;
     color: #000000;
 
 }
@@ -373,7 +340,7 @@ input#cc-number {
 
 select#country,
 select#state {
-    padding-top: 20px;
+    padding-top: 1.25rem;
     width: 100%;
     position: relative;
 }
@@ -389,16 +356,10 @@ select#state {
     left: 12px;
     top: 4px;
     z-index: 100;
-
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    /* identical to box height, or 133% */
-
-
-    /* Gray 3 */
-
+    font-size: 0.75rem;
+    line-height: 1rem;
     color: #828282;
 }
 
@@ -407,16 +368,10 @@ select#state {
     left: 12px;
     top: 4px;
     z-index: 100;
-
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    /* identical to box height, or 133% */
-
-
-    /* Gray 3 */
-
+    font-size: 0.75rem;
+    line-height: 1rem;
     color: #828282;
 }
 
@@ -454,7 +409,7 @@ span.select {
 
 p.customer-info {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.88rem;
 }
 
 button.btn.btn-primary.btn-lg.btn-block {
@@ -473,7 +428,7 @@ button.btn.btn-primary.btn-lg.btn-block {
 }
 
 button#delete,
-button.btn.btn-primary.mt-3{
+button.btn.btn-primary.mt-3 {
     background-color: #DC624E !important;
     border: 1px solid #DC624E !important;
 }
@@ -484,7 +439,7 @@ button.btn.btn-primary.mt-3{
 }
 
 button.accordion-button.position-relative {
-    height: 51px;
+    height: 3.19rem;
 }
 
 .method-desc.bottom p {
@@ -495,7 +450,7 @@ h5.red-title {
     font-style: normal;
     font-weight: bold;
     font-size: 0.75rem;
-    line-height: 24px;
+    line-height: 1.50rem;
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: #DC624E;
@@ -518,8 +473,8 @@ h5.red-title.bottom {
 a.red-title {
     font-style: normal;
     font-weight: 900;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.88rem;
+    line-height: 1.5rem;
     text-align: right;
     color: #DC624E;
 }
@@ -533,38 +488,6 @@ button.delete.btn.btn-primary.float-right {
 form.d-flex.flex-column.add-form {
     max-width: 40rem;
     margin: auto;
-}
-
-@media screen and (max-width: 472px) {
-    button.accordion-button.position-relative img {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 370px) {
-    button.accordion-button.position-relative img {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 576px) {
-
-    .security.d-flex.justify-content-center.gap-1 {
-        display: none !important;
-    }
-
-    .variants.bg-white.p-3.rounded.my-1.edit strong,
-    .variants.bg-white.p-3.rounded.my-1.edit span {
-        display: none;
-    }
-
-}
-
-@media screen and (min-width: 576px) {
-    .mobile.d-flex.flex-column {
-        display: none !important;
-    }
-
 }
 
 button.accordion-button.position-relative {
@@ -610,6 +533,68 @@ button.accordion-button.position-relative {
 }
 
 @media (min-width: 1200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1440px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .names.d-flex.justify-content-between {
+        gap: 10px;
+    }
+
+    .inputs.d-flex.justify-content-between {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .inputs.d-flex.justify-content-between,
+    .names.d-flex.justify-content-between {
+        flex-direction: column;
+    }
+
+    .form-control,
+    .fname-input,
+    .lname-input,
+    .country-input,
+    .state-input {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 472px) {
+    button.accordion-button.position-relative img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    button.accordion-button.position-relative img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .security.d-flex.justify-content-center.gap-1 {
+        display: none !important;
+    }
+
+    .variants.bg-white.p-3.rounded.my-1.edit strong,
+    .variants.bg-white.p-3.rounded.my-1.edit span {
+        display: none;
+    }
+
+}
+@media screen and (min-width: 576px) {
+    .mobile.d-flex.flex-column {
+        display: none !important;
+    }
+
+}
+
+@media (min-width: 1200px) {
     .col-md-7 {
         padding-left: 0;
         padding-right: 0;
@@ -641,3 +626,21 @@ button.accordion-button.position-relative {
     }
 }
 
+@media screen and (min-width: 767px) and (max-width: 992px) {
+    .inputs.d-flex.justify-content-between,
+    .names.d-flex.justify-content-between {
+        flex-direction: column;
+    }
+
+    .form-control,
+    .fname-input,
+    .lname-input,
+    .country-input,
+    .state-input {
+        width: 100% !important;
+    }
+
+    button.accordion-button.position-relative img {
+        width: 50%;
+    }
+}
