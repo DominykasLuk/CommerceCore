@@ -101,7 +101,7 @@ img.product-count-right {
     padding-bottom: 88px;
 }
 
-.was-validated .custom-select:invalid, .custom-select.is-invalid{
+.was-validated .custom-select:invalid, .custom-select.is-invalid {
     background: none;
 }
 
@@ -111,18 +111,20 @@ img.product-count-right {
         max-width: 1440px;
     }
 }
+
 @media (max-width: 1200px) {
-    .names.d-flex.justify-content-between{
+    .names.d-flex.justify-content-between {
         gap: 10px;
     }
-    .inputs.d-flex.justify-content-between{
+
+    .inputs.d-flex.justify-content-between {
         gap: 10px;
     }
 }
 
-@media (max-width: 576px){
+@media (max-width: 576px) {
     .inputs.d-flex.justify-content-between,
-    .names.d-flex.justify-content-between{
+    .names.d-flex.justify-content-between {
         flex-direction: column;
     }
 
@@ -130,8 +132,8 @@ img.product-count-right {
     .fname-input,
     .lname-input,
     .country-input,
-    .state-input{
-        width: 100%!important;
+    .state-input {
+        width: 100% !important;
     }
 }
 
@@ -470,6 +472,12 @@ button.btn.btn-primary.btn-lg.btn-block {
     margin-bottom: 1.50rem;
 }
 
+button#delete,
+button.btn.btn-primary.mt-3{
+    background-color: #DC624E !important;
+    border: 1px solid #DC624E !important;
+}
+
 .fname-input,
 .lname-input {
     width: 18.00rem;
@@ -522,10 +530,24 @@ button.delete.btn.btn-primary.float-right {
     top: 2px;
 }
 
-@media screen and (max-width: 576px) {
+form.d-flex.flex-column.add-form {
+    max-width: 40rem;
+    margin: auto;
+}
+
+@media screen and (max-width: 472px) {
+    button.accordion-button.position-relative img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 370px) {
     button.accordion-button.position-relative img {
         display: none;
     }
+}
+
+@media screen and (max-width: 576px) {
 
     .security.d-flex.justify-content-center.gap-1 {
         display: none !important;
@@ -535,6 +557,14 @@ button.delete.btn.btn-primary.float-right {
     .variants.bg-white.p-3.rounded.my-1.edit span {
         display: none;
     }
+
+}
+
+@media screen and (min-width: 576px) {
+    .mobile.d-flex.flex-column {
+        display: none !important;
+    }
+
 }
 
 button.accordion-button.position-relative {

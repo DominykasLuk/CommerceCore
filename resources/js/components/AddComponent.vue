@@ -1,28 +1,28 @@
-<template>
+<template xmlns:sv-bind="http://www.w3.org/1999/xhtml">
     <div class="container">
         <div class="row">
-            <div class="col-md-7 p-5">
-                <h5 class="red-title">VARIANTS</h5>
-                <div class="variants bg-white p-3 rounded my-1 edit">
+            <div class="col-md-7">
+                <div class="variants bg-white">
+                    <h5 class="red-title top">VARIANTS</h5>
                     <table class="col-12 float-down">
                         <th>
                             <img class="mr-3" src="assets/1.png" /><strong
-                                >{{ resultCount }}x </strong
-                            ><span class="simple">CoreProducts</span>
+                        >{{ resultCount }}x </strong
+                        ><span class="simple">CoreProducts</span>
                         </th>
                         <th class="float-right">
                             <a class="red-title" id="change" href="/"
-                                >Back</a
+                            >Back</a
                             >
                         </th>
                     </table>
-                    <hr class="line" />
+                    <div class="line-left"></div>
                     <table class="col-12 float-down">
                         <tr v-for="item in list" v-bind:key="item.id">
                             <th>
                                 <img class="mr-3" src="assets/2.png" /><strong
-                                    >1x</strong
-                                ><span class="simple">{{ item.name }}</span>
+                            >1x</strong
+                            ><span class="simple">{{ item.name }}</span>
                             </th>
                             <th class="">${{ item.price }}</th>
                             <th class="d-flex justify-content-end">
@@ -36,66 +36,58 @@
                             </th>
                         </tr>
                     </table>
-                    <div class="d-flex justify-content-end"></div>
                 </div>
-
-
-                    <form class="d-flex flex-column" @submit.stop.prevent="addProduct" method="post" >
-                        <input class="my-3" placeholder="Product Name" type="text" name="productName" v-model="formData.name">
-                        <input placeholder="Price" type="text" name="price" v-model="formData.price">
-                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                    </form>
+                <form class="d-flex flex-column add-form" @submit.stop.prevent="addProduct" method="post" >
+                    <input class="my-3" placeholder="Product Name" type="text" name="productName" v-model="formData.name">
+                    <input placeholder="Price" type="text" name="price" v-model="formData.price">
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
             </div>
-            <div class="col-md-5 bg-white p-5 pt-5">
-                <table class="col-12 float-down">
-                    <tr>
-                        <th>
-                            <img class="mr-3" src="assets/1.png" /><strong
-                                >{{ resultCount }}x </strong
-                            ><span class="simple">CoreProducts</span>
-                        </th>
-                        <th class="float-right">
-                            <strong>${{ total }}</strong>
-                        </th>
-                    </tr>
-                </table>
-                <hr class="line" />
-                <table class="col-12">
-                    <tr>
-                        <th class="total">Total:</th>
-                        <th class="float-right">
-                            <span class="usd">USD</span>
-                            <strong class="price">${{ total }}</strong>
-                        </th>
-                    </tr>
-                </table>
-                <div
-                    class="
-                        border
-                        d-flex
-                        justify-content-center
-                        align-content-center
-                        flex-column
-                        p-4
-                        rounded
-                        mt-3
-                    "
-                >
-                    <div class="d-flex align-items-center">
-                        <img src="assets/Return.png" /><strong class="ml-2"
-                            >60-day fit guarantee</strong
-                        >
+
+            <div class="col-md-5 bg-white">
+                <div class="right-info">
+                    <table class="col-12 float-down">
+                        <tr>
+                            <th>
+                                <img class="product-count-right" src="assets/1.png"/>
+                                <span class="count-top">{{ resultCount }}x</span><span
+                                class="simple-right">CoreProduct®</span>
+                            </th>
+                            <th>
+                                <div class="d-flex justify-content-end">
+                                    <span class="price-top">${{ total }}</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                    <div class="line"></div>
+                    <table class="col-12">
+                        <tr>
+                            <th class="total">Total:</th>
+                            <th>
+                                <div class="d-flex justify-content-end">
+                                    <span class="price-big">${{ total }}</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                    <div class="return-box">
+                        <div class="d-flex align-items-center return-text">
+                            <img class="return-img" src="assets/Return.png"/>
+                            <p>60-day fit guarantee</p>
+                        </div>
+                        <p>
+                            Either it doesn’t fit or simply you don’t like it You
+                            can return it within 60 days for a full refund. No
+                            questions asked.
+                        </p>
                     </div>
-                    <p>
-                        Either it doesn’t fit or simply you don’t like it You
-                        can return it within 60 days for a full refund. No
-                        questions asked.
-                    </p>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 <script>
 export default {
     data() {

@@ -29,7 +29,7 @@
                         </tr>
                     </table>
                     <div class="d-flex justify-content-end">
-                    <a class="btn btn-primary ">SAVE CHANGES</a>
+                        <a class="btn btn-primary ">SAVE CHANGES</a>
                     </div>
                 </div>
                 <form
@@ -295,6 +295,17 @@
                         <img src="/assets/VeriSign.png"/>
                         <img src="/assets/McAfee.png"/>
                         <img src="/assets/Comodo.png"/>
+                    </div>
+
+                    <div class="mobile d-flex flex-column ">
+                        <div class="d-flex justify-content-around">
+                            <img src="/assets/NortonSecure.png"/>
+                            <img src="/assets/VeriSign.png"/>
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <img src="/assets/McAfee.png"/>
+                            <img src="/assets/Comodo.png"/>
+                        </div>
                     </div>
                 </form>
             </div>
