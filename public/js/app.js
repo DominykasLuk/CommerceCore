@@ -2593,6 +2593,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -38638,9 +38641,7 @@ var render = function () {
             0
           ),
           _vm._v(" "),
-          _c("a", { staticClass: "btn btn-primary float-right" }, [
-            _vm._v("SAVE CHANGES"),
-          ]),
+          _vm._m(1),
         ]),
         _vm._v(" "),
         _c(
@@ -38661,7 +38662,7 @@ var render = function () {
               _vm._v("PAYMENT AND SHIPPING"),
             ]),
             _vm._v(" "),
-            _vm._m(1),
+            _vm._m(2),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex justify-content-between" }, [
               _c("div", { staticClass: "fname-input" }, [
@@ -38954,7 +38955,7 @@ var render = function () {
               ]),
             ]),
             _vm._v(" "),
-            _vm._m(2),
+            _vm._m(3),
             _vm._v(" "),
             _c(
               "div",
@@ -38965,7 +38966,7 @@ var render = function () {
               },
               [
                 _c("div", { staticClass: "accordion-item" }, [
-                  _vm._m(3),
+                  _vm._m(4),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -39139,7 +39140,7 @@ var render = function () {
                 )
               : _vm._e(),
             _vm._v(" "),
-            _vm._m(4),
+            _vm._m(5),
           ]
         ),
       ]),
@@ -39188,7 +39189,7 @@ var render = function () {
             ]),
           ]),
           _vm._v(" "),
-          _vm._m(5),
+          _vm._m(6),
         ]),
       ]),
     ]),
@@ -39205,6 +39206,14 @@ var staticRenderFns = [
         { staticClass: "red-title", attrs: { id: "change", href: "add" } },
         [_vm._v("Change")]
       ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex justify-content-end" }, [
+      _c("a", { staticClass: "btn btn-primary " }, [_vm._v("SAVE CHANGES")]),
     ])
   },
   function () {
@@ -39304,6 +39313,7 @@ var staticRenderFns = [
           staticClass: "return-img",
           attrs: { src: "assets/Return.png" },
         }),
+        _vm._v(" "),
         _c("p", [_vm._v("60-day fit guarantee")]),
       ]),
       _vm._v(" "),

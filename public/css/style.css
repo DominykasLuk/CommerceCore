@@ -247,7 +247,7 @@ span.price-top {
     margin-bottom: 1.00rem;
 }
 
-a.btn.btn-primary.float-right {
+a.btn.btn-primary {
     background-color: #DC624E !important;
     border: 1px solid #DC624E !important;
     box-shadow: 0px 4px 10px rgb(67 40 16 / 24%);
@@ -261,9 +261,7 @@ a.btn.btn-primary.float-right {
     padding-top: 0.75rem;
     width: 12.69rem;
     height: 3rem;
-    position: absolute;
-    right: 1.5rem;
-    bottom: 1.5rem;
+    margin-top: 1rem;
 }
 
 .btn-lg, .btn-group-lg > .btn {
@@ -502,7 +500,7 @@ button.delete.btn.btn-primary.float-right {
     }
 
     .security.d-flex.justify-content-center.gap-1 {
-        display: none!important;
+        display: none !important;
     }
 
     .variants.bg-white.p-3.rounded.my-1.edit strong,
@@ -520,7 +518,7 @@ button.accordion-button.position-relative {
 }
 
 .right-info {
-    width: 23.38rem;
+    max-width: 23.38rem;
     margin: auto;
 }
 
@@ -540,6 +538,16 @@ button.accordion-button.position-relative {
 
 #yes:checked {
     background-color: #DC624E;
+}
+@media (min-width: 1200px) {
+    .col-md-7{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .col-md-5.bg-white{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media (min-width: 768px) {

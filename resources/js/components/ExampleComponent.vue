@@ -28,8 +28,9 @@
                             </th>
                         </tr>
                     </table>
-
-                    <a class="btn btn-primary float-right">SAVE CHANGES</a>
+                    <div class="d-flex justify-content-end">
+                    <a class="btn btn-primary ">SAVE CHANGES</a>
+                    </div>
                 </div>
                 <form
                     class="needs-validation bg-white position-relative"
@@ -303,7 +304,8 @@
                         <tr>
                             <th>
                                 <img class="product-count-right" src="assets/1.png"/>
-                                <span class="count-top">{{ resultCount }}x</span><span class="simple-right">CoreProduct®</span>
+                                <span class="count-top">{{ resultCount }}x</span><span
+                                class="simple-right">CoreProduct®</span>
                             </th>
                             <th>
                                 <div class="d-flex justify-content-end">
@@ -325,7 +327,8 @@
                     </table>
                     <div class="return-box">
                         <div class="d-flex align-items-center return-text">
-                            <img class="return-img" src="assets/Return.png"/><p>60-day fit guarantee</p>
+                            <img class="return-img" src="assets/Return.png"/>
+                            <p>60-day fit guarantee</p>
                         </div>
                         <p>
                             Either it doesn’t fit or simply you don’t like it You
