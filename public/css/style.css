@@ -30,6 +30,51 @@ th {
     color: #333333;
 }
 
+.simple-right {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+
+span.count-top {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+
+th.total {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #828282;
+    position: relative;
+    top: 5px;
+}
+
+span.price-big {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: right;
+    color: #333333;
+}
+
+span.price-big::before {
+    content: 'USD';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    margin-right: 7px;
+}
+
 img.product-photo {
     margin-bottom: 0.44rem;
 }
@@ -48,14 +93,11 @@ img.product-count-right {
 
 .col-md-7 {
     background: #F8F1EB;
-    padding-top: 5.75rem;
-    padding-bottom: 8.06rem;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 5.75rem 0.94rem 8.06rem;
 }
 
 .col-md-5.bg-white {
-
+    padding-top: 88px;
 }
 
 
@@ -80,7 +122,7 @@ span.simple.bit-right {
 }
 
 .variants.bg-white {
-    height: 19.88rem;
+    min-height: 19.88rem;
     max-width: 40rem;
     padding: 1rem 1.5rem 1.5rem;
     margin: auto auto 3.50rem;
@@ -97,7 +139,7 @@ form.needs-validation.bg-white {
     border: 1px solid #E9D6C5;
     box-sizing: border-box;
     border-radius: 6px;
-    height: 54.13rem;
+    min-height: 54.13rem;
 }
 
 .method-desc h5 {
@@ -165,12 +207,39 @@ table.table tr {
 }
 
 .return-box {
+    height: 172px;
     width: 100%;
     border: 1px solid #E0E0E0;
     box-sizing: border-box;
     border-radius: 3px;
-    padding: 1.75rem 1.50rem 1.50rem 1.56rem;
-    margin-top: 1.63rem;
+    padding: 1.50rem 1.50rem 1.50rem 1.56rem;
+    margin-top: 1.75rem;
+}
+
+.return-box p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: #828282;
+}
+
+.d-flex.align-items-center.return-text p {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+span.price-top {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+
 }
 
 .return-img {
@@ -432,18 +501,12 @@ button.delete.btn.btn-primary.float-right {
         display: none;
     }
 
-    .security.d-flex.justify-content-center {
-        flex-direction: column;
-        align-itrems: center;
-    }
-
-    .security.d-flex.justify-content-center img {
-        width: 50%;
+    .security.d-flex.justify-content-center.gap-1 {
+        display: none!important;
     }
 
     .variants.bg-white.p-3.rounded.my-1.edit strong,
     .variants.bg-white.p-3.rounded.my-1.edit span {
-
         display: none;
     }
 }
@@ -454,6 +517,11 @@ button.accordion-button.position-relative {
 
 .radio input {
     pointer-events: all;
+}
+
+.right-info {
+    width: 23.38rem;
+    margin: auto;
 }
 
 #yes {

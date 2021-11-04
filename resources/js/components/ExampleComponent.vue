@@ -298,40 +298,41 @@
             </div>
 
             <div class="col-md-5 bg-white">
-                <table class="col-12 float-down">
-                    <tr>
-                        <th>
-                            <img class="product-count-right" src="assets/1.png"/>
-                            <span>{{ resultCount }}x</span><span class="simple">CoreProduct®</span>
-                        </th>
-                        <th class="">
-                            <div class="d-flex justify-content-end">
-                                <strong>${{ total }}</strong>
-                            </div>
-                        </th>
-                    </tr>
-                </table>
-                <div class="line"></div>
-                <table class="col-12">
-                    <tr>
-                        <th class="total">Total:</th>
-                        <th>
-                            <div class="d-flex justify-content-end">
-                                <span class="usd">USD</span>
-                                <strong class="price">${{ total }}</strong>
-                            </div>
-                        </th>
-                    </tr>
-                </table>
-                <div class="return-box">
-                    <div class="d-flex align-items-center">
-                        <img class="return-img" src="assets/Return.png"/><strong>60-day fit guarantee</strong>
+                <div class="right-info">
+                    <table class="col-12 float-down">
+                        <tr>
+                            <th>
+                                <img class="product-count-right" src="assets/1.png"/>
+                                <span class="count-top">{{ resultCount }}x</span><span class="simple-right">CoreProduct®</span>
+                            </th>
+                            <th>
+                                <div class="d-flex justify-content-end">
+                                    <span class="price-top">${{ total }}</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                    <div class="line"></div>
+                    <table class="col-12">
+                        <tr>
+                            <th class="total">Total:</th>
+                            <th>
+                                <div class="d-flex justify-content-end">
+                                    <span class="price-big">${{ total }}</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                    <div class="return-box">
+                        <div class="d-flex align-items-center return-text">
+                            <img class="return-img" src="assets/Return.png"/><p>60-day fit guarantee</p>
+                        </div>
+                        <p>
+                            Either it doesn’t fit or simply you don’t like it You
+                            can return it within 60 days for a full refund. No
+                            questions asked.
+                        </p>
                     </div>
-                    <p>
-                        Either it doesn’t fit or simply you don’t like it You
-                        can return it within 60 days for a full refund. No
-                        questions asked.
-                    </p>
                 </div>
             </div>
         </div>

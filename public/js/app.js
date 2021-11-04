@@ -2592,6 +2592,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -39144,45 +39145,51 @@ var render = function () {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-5 bg-white" }, [
-        _c("table", { staticClass: "col-12 float-down" }, [
-          _c("tr", [
-            _c("th", [
-              _c("img", {
-                staticClass: "product-count-right",
-                attrs: { src: "assets/1.png" },
-              }),
-              _vm._v(" "),
-              _c("span", [_vm._v(_vm._s(_vm.resultCount) + "x")]),
-              _c("span", { staticClass: "simple" }, [_vm._v("CoreProduct®")]),
-            ]),
-            _vm._v(" "),
-            _c("th", {}, [
-              _c("div", { staticClass: "d-flex justify-content-end" }, [
-                _c("strong", [_vm._v("$" + _vm._s(_vm.total))]),
-              ]),
-            ]),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "line" }),
-        _vm._v(" "),
-        _c("table", { staticClass: "col-12" }, [
-          _c("tr", [
-            _c("th", { staticClass: "total" }, [_vm._v("Total:")]),
-            _vm._v(" "),
-            _c("th", [
-              _c("div", { staticClass: "d-flex justify-content-end" }, [
-                _c("span", { staticClass: "usd" }, [_vm._v("USD")]),
+        _c("div", { staticClass: "right-info" }, [
+          _c("table", { staticClass: "col-12 float-down" }, [
+            _c("tr", [
+              _c("th", [
+                _c("img", {
+                  staticClass: "product-count-right",
+                  attrs: { src: "assets/1.png" },
+                }),
                 _vm._v(" "),
-                _c("strong", { staticClass: "price" }, [
-                  _vm._v("$" + _vm._s(_vm.total)),
+                _c("span", { staticClass: "count-top" }, [
+                  _vm._v(_vm._s(_vm.resultCount) + "x"),
+                ]),
+                _c("span", { staticClass: "simple-right" }, [
+                  _vm._v("CoreProduct®"),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("th", [
+                _c("div", { staticClass: "d-flex justify-content-end" }, [
+                  _c("span", { staticClass: "price-top" }, [
+                    _vm._v("$" + _vm._s(_vm.total)),
+                  ]),
                 ]),
               ]),
             ]),
           ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "line" }),
+          _vm._v(" "),
+          _c("table", { staticClass: "col-12" }, [
+            _c("tr", [
+              _c("th", { staticClass: "total" }, [_vm._v("Total:")]),
+              _vm._v(" "),
+              _c("th", [
+                _c("div", { staticClass: "d-flex justify-content-end" }, [
+                  _c("span", { staticClass: "price-big" }, [
+                    _vm._v("$" + _vm._s(_vm.total)),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _vm._m(5),
         ]),
-        _vm._v(" "),
-        _vm._m(5),
       ]),
     ]),
   ])
@@ -39292,17 +39299,17 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "return-box" }, [
-      _c("div", { staticClass: "d-flex align-items-center" }, [
+      _c("div", { staticClass: "d-flex align-items-center return-text" }, [
         _c("img", {
           staticClass: "return-img",
           attrs: { src: "assets/Return.png" },
         }),
-        _c("strong", [_vm._v("60-day fit guarantee")]),
+        _c("p", [_vm._v("60-day fit guarantee")]),
       ]),
       _vm._v(" "),
       _c("p", [
         _vm._v(
-          "\n                    Either it doesn’t fit or simply you don’t like it You\n                    can return it within 60 days for a full refund. No\n                    questions asked.\n                "
+          "\n                        Either it doesn’t fit or simply you don’t like it You\n                        can return it within 60 days for a full refund. No\n                        questions asked.\n                    "
         ),
       ]),
     ])
