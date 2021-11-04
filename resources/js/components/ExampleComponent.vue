@@ -47,7 +47,9 @@
                                 <p>Fields marked as (*) are required.</p>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="fname-input">
                             <input
                                 type="text"
                                 class="form-control"
@@ -59,14 +61,9 @@
                                 required
                                 :class="hasError('fname') ? 'is-invalid' : ''"
                             />
-                            <div
-                                v-if="hasError('fname')"
-                                class="invalid-feedback"
-                            >
-                                {{ getError("fname") }}
-                            </div>
+
                         </div>
-                        <div class="col-sm-6">
+                        <div class="lname-input">
                             <input
                                 type="text"
                                 class="form-control"
@@ -78,12 +75,7 @@
                                 required
                                 :class="hasError('lname') ? 'is-invalid' : ''"
                             />
-                            <div
-                                v-if="hasError('lname')"
-                                class="invalid-feedback"
-                            >
-                                {{ getError("lname") }}
-                            </div>
+
                         </div>
                     </div>
 
@@ -98,9 +90,7 @@
                             required
                             :class="hasError('email') ? 'is-invalid' : ''"
                         />
-                        <div v-if="hasError('email')" class="invalid-feedback">
-                            {{ getError("email") }}
-                        </div>
+
                     </div>
 
                     <div class="">
@@ -117,12 +107,7 @@
                             required
                             :class="hasError('address') ? 'is-invalid' : ''"
                         />
-                        <div
-                            v-if="hasError('address')"
-                            class="invalid-feedback"
-                        >
-                            {{ getError("address") }}
-                        </div>
+
                     </div>
                     <div class="">
                         <input
@@ -134,16 +119,14 @@
                             v-model="formData.city"
                             :class="hasError('city') ? 'is-invalid' : ''"
                         />
-                        <div v-if="hasError('city')" class="invalid-feedback">
-                            {{ getError("city") }}
-                        </div>
+
                     </div>
 
-                    <div class="row">
-                        <div class="col-sm-4">
+                    <div class="d-flex justify-content-between">
+                        <div class="country-input">
                             <span>*Country</span>
                             <select
-                                class="custom-select country d-block w-100"
+                                class="country d-block custom-select"
                                 name="country"
                                 id="country"
                                 v-model="formData.country"
@@ -153,18 +136,13 @@
                                 <option selected>Select</option>
                                 <option>United States</option>
                             </select>
-                            <div
-                                v-if="hasError('country')"
-                                class="invalid-feedback"
-                            >
-                                {{ getError("country") }}
-                            </div>
+
                         </div>
-                        <div class="col-sm-4">
-                            <span>*State</span>
+                        <div class="state-input">
+                            <span>*Region/State</span>
                             <select
                                 :class="hasError('state') ? 'is-invalid' : ''"
-                                class="custom-select state d-block w-100"
+                                class="state d-block custom-select"
                                 name="state"
                                 id="state"
                                 v-model="formData.state"
@@ -173,14 +151,9 @@
                                 <option selected>Select</option>
                                 <option>California</option>
                             </select>
-                            <div
-                                v-if="hasError('state')"
-                                class="invalid-feedback"
-                            >
-                                {{ getError("state") }}
-                            </div>
+
                         </div>
-                        <div class="col-sm-4">
+                        <div class="zip-input">
                             <input
                                 :class="hasError('zip') ? 'is-invalid' : ''"
                                 type="text"
@@ -191,12 +164,7 @@
                                 v-model="formData.zip"
                                 required
                             />
-                            <div
-                                v-if="hasError('zip')"
-                                class="invalid-feedback"
-                            >
-                                {{ getError("zip") }}
-                            </div>
+
                         </div>
                     </div>
 
@@ -233,7 +201,7 @@
                                     <img
                                         class="position-absolute"
                                         src="assets/security.png"
-                                        style="right: 10px"
+                                        style="right: 12px"
                                     />
                                 </button>
                             </h2>
@@ -243,32 +211,25 @@
                                 aria-labelledby="panelsStayOpen-headingOne"
                             >
                                 <div class="accordion-body">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <input
-                                                :class="
+                                    <div class="cc-number">
+                                        <input
+                                            :class="
                                                     hasError('cc_number')
                                                         ? 'is-invalid'
                                                         : ''
                                                 "
-                                                type="text"
-                                                class="form-control"
-                                                id="cc-number"
-                                                name="cc-number"
-                                                placeholder="Card number"
-                                                required
-                                                v-model="formData.cc_number"
-                                            />
-                                            <div
-                                                v-if="hasError('cc_number')"
-                                                class="invalid-feedback"
-                                            >
-                                                {{ getError("cc_number") }}
-                                            </div>
-                                        </div>
+                                            type="text"
+                                            class="form-control"
+                                            id="cc-number"
+                                            name="cc-number"
+                                            placeholder="Card number"
+                                            required
+                                            v-model="formData.cc_number"
+                                        />
+
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-3 expiration">
+                                    <div class="d-flex">
+                                        <div class="expiration-input">
                                             <input
                                                 :class="
                                                     hasError('cc_expiration')
@@ -282,38 +243,23 @@
                                                 placeholder="MM/YY"
                                                 required
                                             />
-                                            <div
-                                                v-if="hasError('cc_expiration')"
-                                                class="invalid-feedback"
-                                            >
-                                                {{ getError("cc_expiration") }}
-                                            </div>
+
                                         </div>
-
-
-                                        <div class="col-sm-3 cvv">
-                                            <div class="position-relative">
-                                                <input
-                                                    :class="
+                                        <div class="cvv-input position-relative">
+                                            <input
+                                                :class="
                                                         hasError('cvv')
                                                             ? 'is-invalid'
                                                             : ''
                                                     "
-                                                    type="text"
-                                                    class="form-control"
-                                                    id="cc-cvv"
-                                                    v-model="formData.cvv"
-                                                    placeholder="CVV"
-                                                    required
-                                                />
-                                                <div
-                                                    v-if="hasError('cvv')"
-                                                    class="invalid-feedback"
-                                                >
-                                                    The valid cvv field is
-                                                    required.
-                                                </div>
-                                            </div>
+                                                type="text"
+                                                class="form-control"
+                                                id="cc-cvv"
+                                                v-model="formData.cvv"
+                                                placeholder="CVV"
+                                                required
+                                            />
+                                            <img src="assets/infoOutline.png">
                                         </div>
                                     </div>
                                 </div>
@@ -322,7 +268,7 @@
                     </div>
 
                     <button
-                        class="btn btn-primary btn-lg btn-block my-3"
+                        class="btn btn-primary btn-lg btn-block"
                         type="submit"
                         :disabled="hasAnyErrors"
                     >
@@ -342,7 +288,7 @@
                     >
                         <strong>Error!</strong> There was an error
                     </div>
-                    <div class="security d-flex justify-content-center">
+                    <div class="security d-flex justify-content-center gap-1">
                         <img src="/assets/NortonSecure.png"/>
                         <img src="/assets/VeriSign.png"/>
                         <img src="/assets/McAfee.png"/>

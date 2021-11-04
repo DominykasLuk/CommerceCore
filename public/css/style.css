@@ -111,8 +111,9 @@ form.needs-validation.bg-white {
 }
 
 .method-desc.bottom h5 {
-    margin-top: 0.56rem;
-    margin-bottom: 0.31rem;
+    margin: 0;
+    padding-top: 0.63rem;
+    padding-bottom: 0.38rem;
 }
 
 .method-desc p {
@@ -121,6 +122,16 @@ form.needs-validation.bg-white {
     font-size: 0.75rem;
     line-height: 1.00rem;
     color: #BDBDBD;
+}
+
+.accordion-button {
+    padding: 1.13rem 1.06rem 1rem 1rem !important;
+}
+
+.cvv-input img {
+    position: absolute;
+    right: 0.63rem;
+    top: 1rem;
 }
 
 .accordion-button::after {
@@ -220,6 +231,16 @@ input[type="radio"] {
 .accordion-body {
     height: 9.13rem;
     background-color: #FAFAFA;
+    padding: 1.06rem 0.88rem 1.06rem 0.94rem !important;
+}
+
+.expiration-input,
+.cvv-input {
+    max-width: 7.00rem;
+}
+
+.cvv-input {
+    margin-left: 1rem;
 }
 
 .method-desc img {
@@ -245,17 +266,6 @@ input#address {
     margin-bottom: 1rem;
 }
 
-.col-sm-4 span {
-    position: absolute;
-    left: 1.50rem;
-    top: 4px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 0.75rem;
-    line-height: 1.00rem;
-    color: #828282;
-}
-
 input#city {
     margin-bottom: 1rem;
 }
@@ -267,7 +277,56 @@ input#cc-number {
 select#country,
 select#state {
     padding-top: 20px;
+    width: 100%;
+    position: relative;
 }
+
+.country-input,
+.state-input {
+    width: 12.63rem;
+    position: relative;
+}
+
+.country-input span {
+    position: absolute;
+    left: 12px;
+    top: 4px;
+    z-index: 100;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+
+    /* Gray 3 */
+
+    color: #828282;
+}
+
+.state-input span {
+    position: absolute;
+    left: 12px;
+    top: 4px;
+    z-index: 100;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+
+    /* Gray 3 */
+
+    color: #828282;
+}
+
+input#zip {
+    width: 9.75rem;
+}
+
 
 input#firstName,
 input#lastName,
@@ -301,20 +360,32 @@ p.customer-info {
     font-size: 14px;
 }
 
-button.btn.btn-primary.btn-lg.btn-block.my-3 {
+button.btn.btn-primary.btn-lg.btn-block {
     background-color: #DC624E !important;
     border: 1px solid #DC624E !important;
     font-style: normal;
     font-weight: 900;
     font-size: 0.88rem;
     line-height: 1.50rem;
-    /* identical to box height, or 171% */
-
     height: 3.50rem;
-
     text-align: center;
     letter-spacing: 0.07em;
     text-transform: uppercase;
+    margin-top: 1.75rem;
+    margin-bottom: 1.50rem;
+}
+
+.fname-input,
+.lname-input {
+    width: 18.00rem;
+}
+
+button.accordion-button.position-relative {
+    height: 51px;
+}
+
+.method-desc.bottom p {
+    margin-bottom: 15px;
 }
 
 h5.red-title {
@@ -390,12 +461,14 @@ button.accordion-button.position-relative {
     box-shadow: 0 0 0 1px #DC624E;
     appearance: none;
     border-radius: 50%;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     background-color: #fff;
     transition: all ease-in 0.2s;
+    margin-top: 1px;
 
 }
+
 
 #yes:checked {
     background-color: #DC624E;

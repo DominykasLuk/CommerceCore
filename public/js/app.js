@@ -2592,60 +2592,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -38714,10 +38660,10 @@ var render = function () {
               _vm._v("PAYMENT AND SHIPPING"),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _vm._m(1),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-sm-6" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
+              _c("div", { staticClass: "fname-input" }, [
                 _c("input", {
                   directives: [
                     {
@@ -38747,19 +38693,9 @@ var render = function () {
                     },
                   },
                 }),
-                _vm._v(" "),
-                _vm.hasError("fname")
-                  ? _c("div", { staticClass: "invalid-feedback" }, [
-                      _vm._v(
-                        "\n                            " +
-                          _vm._s(_vm.getError("fname")) +
-                          "\n                        "
-                      ),
-                    ])
-                  : _vm._e(),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-sm-6" }, [
+              _c("div", { staticClass: "lname-input" }, [
                 _c("input", {
                   directives: [
                     {
@@ -38789,16 +38725,6 @@ var render = function () {
                     },
                   },
                 }),
-                _vm._v(" "),
-                _vm.hasError("lname")
-                  ? _c("div", { staticClass: "invalid-feedback" }, [
-                      _vm._v(
-                        "\n                            " +
-                          _vm._s(_vm.getError("lname")) +
-                          "\n                        "
-                      ),
-                    ])
-                  : _vm._e(),
               ]),
             ]),
             _vm._v(" "),
@@ -38831,16 +38757,6 @@ var render = function () {
                   },
                 },
               }),
-              _vm._v(" "),
-              _vm.hasError("email")
-                ? _c("div", { staticClass: "invalid-feedback" }, [
-                    _vm._v(
-                      "\n                        " +
-                        _vm._s(_vm.getError("email")) +
-                        "\n                    "
-                    ),
-                  ])
-                : _vm._e(),
             ]),
             _vm._v(" "),
             _c("div", {}, [
@@ -38878,16 +38794,6 @@ var render = function () {
                   },
                 },
               }),
-              _vm._v(" "),
-              _vm.hasError("address")
-                ? _c("div", { staticClass: "invalid-feedback" }, [
-                    _vm._v(
-                      "\n                        " +
-                        _vm._s(_vm.getError("address")) +
-                        "\n                    "
-                    ),
-                  ])
-                : _vm._e(),
             ]),
             _vm._v(" "),
             _c("div", {}, [
@@ -38918,20 +38824,10 @@ var render = function () {
                   },
                 },
               }),
-              _vm._v(" "),
-              _vm.hasError("city")
-                ? _c("div", { staticClass: "invalid-feedback" }, [
-                    _vm._v(
-                      "\n                        " +
-                        _vm._s(_vm.getError("city")) +
-                        "\n                    "
-                    ),
-                  ])
-                : _vm._e(),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-sm-4" }, [
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
+              _c("div", { staticClass: "country-input" }, [
                 _c("span", [_vm._v("*Country")]),
                 _vm._v(" "),
                 _c(
@@ -38945,7 +38841,7 @@ var render = function () {
                         expression: "formData.country",
                       },
                     ],
-                    staticClass: "custom-select country d-block w-100",
+                    staticClass: "country d-block custom-select",
                     class: _vm.hasError("country") ? "is-invalid" : "",
                     attrs: { name: "country", id: "country", required: "" },
                     on: {
@@ -38976,20 +38872,10 @@ var render = function () {
                     _c("option", [_vm._v("United States")]),
                   ]
                 ),
-                _vm._v(" "),
-                _vm.hasError("country")
-                  ? _c("div", { staticClass: "invalid-feedback" }, [
-                      _vm._v(
-                        "\n                            " +
-                          _vm._s(_vm.getError("country")) +
-                          "\n                        "
-                      ),
-                    ])
-                  : _vm._e(),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-sm-4" }, [
-                _c("span", [_vm._v("*State")]),
+              _c("div", { staticClass: "state-input" }, [
+                _c("span", [_vm._v("*Region/State")]),
                 _vm._v(" "),
                 _c(
                   "select",
@@ -39002,7 +38888,7 @@ var render = function () {
                         expression: "formData.state",
                       },
                     ],
-                    staticClass: "custom-select state d-block w-100",
+                    staticClass: "state d-block custom-select",
                     class: _vm.hasError("state") ? "is-invalid" : "",
                     attrs: { name: "state", id: "state", required: "" },
                     on: {
@@ -39033,19 +38919,9 @@ var render = function () {
                     _c("option", [_vm._v("California")]),
                   ]
                 ),
-                _vm._v(" "),
-                _vm.hasError("state")
-                  ? _c("div", { staticClass: "invalid-feedback" }, [
-                      _vm._v(
-                        "\n                            " +
-                          _vm._s(_vm.getError("state")) +
-                          "\n                        "
-                      ),
-                    ])
-                  : _vm._e(),
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-sm-4" }, [
+              _c("div", { staticClass: "zip-input" }, [
                 _c("input", {
                   directives: [
                     {
@@ -39074,16 +38950,6 @@ var render = function () {
                     },
                   },
                 }),
-                _vm._v(" "),
-                _vm.hasError("zip")
-                  ? _c("div", { staticClass: "invalid-feedback" }, [
-                      _vm._v(
-                        "\n                            " +
-                          _vm._s(_vm.getError("zip")) +
-                          "\n                        "
-                      ),
-                    ])
-                  : _vm._e(),
               ]),
             ]),
             _vm._v(" "),
@@ -39111,57 +38977,45 @@ var render = function () {
                     },
                     [
                       _c("div", { staticClass: "accordion-body" }, [
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "col-sm-12" }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.formData.cc_number,
-                                  expression: "formData.cc_number",
-                                },
-                              ],
-                              staticClass: "form-control",
-                              class: _vm.hasError("cc_number")
-                                ? "is-invalid"
-                                : "",
-                              attrs: {
-                                type: "text",
-                                id: "cc-number",
-                                name: "cc-number",
-                                placeholder: "Card number",
-                                required: "",
+                        _c("div", { staticClass: "cc-number" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.formData.cc_number,
+                                expression: "formData.cc_number",
                               },
-                              domProps: { value: _vm.formData.cc_number },
-                              on: {
-                                input: function ($event) {
-                                  if ($event.target.composing) {
-                                    return
-                                  }
-                                  _vm.$set(
-                                    _vm.formData,
-                                    "cc_number",
-                                    $event.target.value
-                                  )
-                                },
+                            ],
+                            staticClass: "form-control",
+                            class: _vm.hasError("cc_number")
+                              ? "is-invalid"
+                              : "",
+                            attrs: {
+                              type: "text",
+                              id: "cc-number",
+                              name: "cc-number",
+                              placeholder: "Card number",
+                              required: "",
+                            },
+                            domProps: { value: _vm.formData.cc_number },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.formData,
+                                  "cc_number",
+                                  $event.target.value
+                                )
                               },
-                            }),
-                            _vm._v(" "),
-                            _vm.hasError("cc_number")
-                              ? _c("div", { staticClass: "invalid-feedback" }, [
-                                  _vm._v(
-                                    "\n                                            " +
-                                      _vm._s(_vm.getError("cc_number")) +
-                                      "\n                                        "
-                                  ),
-                                ])
-                              : _vm._e(),
-                          ]),
+                            },
+                          }),
                         ]),
                         _vm._v(" "),
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "col-sm-3 expiration" }, [
+                        _c("div", { staticClass: "d-flex" }, [
+                          _c("div", { staticClass: "expiration-input" }, [
                             _c("input", {
                               directives: [
                                 {
@@ -39195,20 +39049,12 @@ var render = function () {
                                 },
                               },
                             }),
-                            _vm._v(" "),
-                            _vm.hasError("cc_expiration")
-                              ? _c("div", { staticClass: "invalid-feedback" }, [
-                                  _vm._v(
-                                    "\n                                            " +
-                                      _vm._s(_vm.getError("cc_expiration")) +
-                                      "\n                                        "
-                                  ),
-                                ])
-                              : _vm._e(),
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "col-sm-3 cvv" }, [
-                            _c("div", { staticClass: "position-relative" }, [
+                          _c(
+                            "div",
+                            { staticClass: "cvv-input position-relative" },
+                            [
                               _c("input", {
                                 directives: [
                                   {
@@ -39241,19 +39087,11 @@ var render = function () {
                                 },
                               }),
                               _vm._v(" "),
-                              _vm.hasError("cvv")
-                                ? _c(
-                                    "div",
-                                    { staticClass: "invalid-feedback" },
-                                    [
-                                      _vm._v(
-                                        "\n                                                The valid cvv field is\n                                                required.\n                                            "
-                                      ),
-                                    ]
-                                  )
-                                : _vm._e(),
-                            ]),
-                          ]),
+                              _c("img", {
+                                attrs: { src: "assets/infoOutline.png" },
+                              }),
+                            ]
+                          ),
                         ]),
                       ]),
                     ]
@@ -39265,7 +39103,7 @@ var render = function () {
             _c(
               "button",
               {
-                staticClass: "btn btn-primary btn-lg btn-block my-3",
+                staticClass: "btn btn-primary btn-lg btn-block",
                 attrs: { type: "submit", disabled: _vm.hasAnyErrors },
               },
               [_vm._v("\n                    COMPLETE ORDER\n                ")]
@@ -39366,11 +39204,13 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-12" }, [
-      _c("div", { staticClass: "method-desc" }, [
-        _c("h5", [_vm._v("Customer information")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("Fields marked as (*) are required.")]),
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-sm-12" }, [
+        _c("div", { staticClass: "method-desc" }, [
+          _c("h5", [_vm._v("Customer information")]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Fields marked as (*) are required.")]),
+        ]),
       ]),
     ])
   },
@@ -39421,7 +39261,7 @@ var staticRenderFns = [
             ),
             _c("img", {
               staticClass: "position-absolute",
-              staticStyle: { right: "10px" },
+              staticStyle: { right: "12px" },
               attrs: { src: "assets/security.png" },
             }),
           ]
@@ -39435,7 +39275,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "security d-flex justify-content-center" },
+      { staticClass: "security d-flex justify-content-center gap-1" },
       [
         _c("img", { attrs: { src: "/assets/NortonSecure.png" } }),
         _vm._v(" "),
