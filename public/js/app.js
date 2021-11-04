@@ -2597,7 +2597,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -38666,7 +38665,7 @@ var render = function () {
             _vm._v(" "),
             _vm._m(2),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-between" }, [
+            _c("div", { staticClass: "names d-flex justify-content-between" }, [
               _c("div", { staticClass: "fname-input" }, [
                 _c("input", {
                   directives: [
@@ -38830,136 +38829,140 @@ var render = function () {
               }),
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-between" }, [
-              _c("div", { staticClass: "country-input position-relative" }, [
-                _c("img", { attrs: { src: "assets/ChevronDown.png" } }),
-                _vm._v(" "),
-                _c("span", [_vm._v("*Country")]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.formData.country,
-                        expression: "formData.country",
-                      },
-                    ],
-                    staticClass: "country d-block custom-select",
-                    class: _vm.hasError("country") ? "is-invalid" : "",
-                    attrs: { name: "country", id: "country", required: "" },
-                    on: {
-                      change: function ($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function (o) {
-                            return o.selected
-                          })
-                          .map(function (o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.formData,
-                          "country",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        )
-                      },
-                    },
-                  },
-                  [
-                    _c("option", { attrs: { selected: "" } }, [
-                      _vm._v("Select"),
-                    ]),
-                    _vm._v(" "),
-                    _c("option", [_vm._v("United States")]),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "state-input position-relative" }, [
-                _c("img", { attrs: { src: "assets/ChevronDown.png" } }),
-                _vm._v(" "),
-                _c("span", [_vm._v("*Region/State")]),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.formData.state,
-                        expression: "formData.state",
-                      },
-                    ],
-                    staticClass: "state d-block custom-select",
-                    class: _vm.hasError("state") ? "is-invalid" : "",
-                    attrs: { name: "state", id: "state", required: "" },
-                    on: {
-                      change: function ($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function (o) {
-                            return o.selected
-                          })
-                          .map(function (o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
-                        _vm.$set(
-                          _vm.formData,
-                          "state",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        )
-                      },
-                    },
-                  },
-                  [
-                    _c("option", { attrs: { selected: "" } }, [
-                      _vm._v("Select"),
-                    ]),
-                    _vm._v(" "),
-                    _c("option", [_vm._v("California")]),
-                  ]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "zip-input" }, [
-                _c("input", {
-                  directives: [
+            _c(
+              "div",
+              { staticClass: "inputs d-flex justify-content-between" },
+              [
+                _c("div", { staticClass: "country-input position-relative" }, [
+                  _c("img", { attrs: { src: "assets/ChevronDown.png" } }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("*Country")]),
+                  _vm._v(" "),
+                  _c(
+                    "select",
                     {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.formData.zip,
-                      expression: "formData.zip",
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formData.country,
+                          expression: "formData.country",
+                        },
+                      ],
+                      staticClass: "country d-block custom-select",
+                      class: _vm.hasError("country") ? "is-invalid" : "",
+                      attrs: { name: "country", id: "country", required: "" },
+                      on: {
+                        change: function ($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function (o) {
+                              return o.selected
+                            })
+                            .map(function (o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.formData,
+                            "country",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        },
+                      },
                     },
-                  ],
-                  staticClass: "form-control",
-                  class: _vm.hasError("zip") ? "is-invalid" : "",
-                  attrs: {
-                    type: "text",
-                    id: "zip",
-                    name: "zip",
-                    placeholder: "*Postal code",
-                    required: "",
-                  },
-                  domProps: { value: _vm.formData.zip },
-                  on: {
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.formData, "zip", $event.target.value)
+                    [
+                      _c("option", { attrs: { selected: "" } }, [
+                        _vm._v("Select"),
+                      ]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("United States")]),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "state-input position-relative" }, [
+                  _c("img", { attrs: { src: "assets/ChevronDown.png" } }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("*Region/State")]),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formData.state,
+                          expression: "formData.state",
+                        },
+                      ],
+                      staticClass: "state d-block custom-select",
+                      class: _vm.hasError("state") ? "is-invalid" : "",
+                      attrs: { name: "state", id: "state", required: "" },
+                      on: {
+                        change: function ($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function (o) {
+                              return o.selected
+                            })
+                            .map(function (o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.formData,
+                            "state",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        },
+                      },
                     },
-                  },
-                }),
-              ]),
-            ]),
+                    [
+                      _c("option", { attrs: { selected: "" } }, [
+                        _vm._v("Select"),
+                      ]),
+                      _vm._v(" "),
+                      _c("option", [_vm._v("California")]),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "zip-input" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.formData.zip,
+                        expression: "formData.zip",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    class: _vm.hasError("zip") ? "is-invalid" : "",
+                    attrs: {
+                      type: "text",
+                      id: "zip",
+                      name: "zip",
+                      placeholder: "*Postal code",
+                      required: "",
+                    },
+                    domProps: { value: _vm.formData.zip },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.formData, "zip", $event.target.value)
+                      },
+                    },
+                  }),
+                ]),
+              ]
+            ),
             _vm._v(" "),
             _vm._m(3),
             _vm._v(" "),

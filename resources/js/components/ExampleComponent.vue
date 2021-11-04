@@ -49,7 +49,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-between">
+                    <div class="names d-flex justify-content-between">
                         <div class="fname-input">
                             <input
                                 type="text"
@@ -62,7 +62,6 @@
                                 required
                                 :class="hasError('fname') ? 'is-invalid' : ''"
                             />
-
                         </div>
                         <div class="lname-input">
                             <input
@@ -123,7 +122,7 @@
 
                     </div>
 
-                    <div class="d-flex justify-content-between">
+                    <div class="inputs d-flex justify-content-between">
                         <div class="country-input position-relative">
                             <img src="assets/ChevronDown.png">
                             <span>*Country</span>

@@ -98,12 +98,40 @@ img.product-count-right {
 
 .col-md-5.bg-white {
     padding-top: 88px;
+    padding-bottom: 88px;
+}
+
+.was-validated .custom-select:invalid, .custom-select.is-invalid{
+    background: none;
 }
 
 
 @media (min-width: 1200px) {
     .container-xl, .container-lg, .container-md, .container-sm, .container {
         max-width: 1440px;
+    }
+}
+@media (max-width: 1200px) {
+    .names.d-flex.justify-content-between{
+        gap: 10px;
+    }
+    .inputs.d-flex.justify-content-between{
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px){
+    .inputs.d-flex.justify-content-between,
+    .names.d-flex.justify-content-between{
+        flex-direction: column;
+    }
+
+    .form-control,
+    .fname-input,
+    .lname-input,
+    .country-input,
+    .state-input{
+        width: 100%!important;
     }
 }
 
