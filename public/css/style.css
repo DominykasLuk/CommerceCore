@@ -532,11 +532,12 @@ button.accordion-button.position-relative {
     background-color: #DC624E;
 }
 
-@media (min-width: 1200px) {
-    .container-xl, .container-lg, .container-md, .container-sm, .container {
-        max-width: 1440px;
-    }
+
+.container {
+    max-width: 90.00rem !important;
+
 }
+
 
 @media (max-width: 1200px) {
     .names.d-flex.justify-content-between {
@@ -587,6 +588,7 @@ button.accordion-button.position-relative {
     }
 
 }
+
 @media screen and (min-width: 576px) {
     .mobile.d-flex.flex-column {
         display: none !important;
@@ -596,25 +598,25 @@ button.accordion-button.position-relative {
 
 @media (min-width: 1200px) {
     .col-md-7 {
-        padding-left: 0;
+        padding-left: 22px;
         padding-right: 0;
     }
 
     .col-md-5.bg-white {
         padding-left: 0;
-        padding-right: 0;
+        padding-right: 22px;
     }
 }
 
 @media (min-width: 768px) {
     .col-md-7 {
         flex: 0 0 59.16666666666667%;
-        max-width: 59.16666666666667%;
+        max-width: 852px;
     }
 
     .col-md-5 {
         flex: 0 0 40.83333333333333%;
-        max-width: 40.83333333333333%;
+        max-width: 588px;
     }
 }
 
