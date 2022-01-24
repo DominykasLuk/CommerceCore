@@ -1,9 +1,20 @@
-1. Check your .env credentials and database
-2. run command composer install
-3. run command php artisan key:generate
-4. run command php artisan migrate 
-5. run command php artisan serve
-6. run command npm install
-7. in your browser go to: http://127.0.0.1:8000
-8. add some products in http://127.0.0.1:8000/add or a link "Change"
-9. complete the checkout
+<ul>
+    <li>curl -s "https://laravel.build/example-app" | bash</li>
+    <li>cd example-app</li>
+    <li>./vendor/bin/sail up</li>
+    <li>git clone https://gitlab.com/domsius/addendum</li>
+    <li>copy files from addendum folder to example-app folder</li>
+    <li>copy files from addendum folder to example-app folder</li>
+    <li>docker ps</li>
+    <li>docker exec -it CONTAINER_ID bash</li>
+    <li>composer install</li>
+    <li>php artisan key:generate</li>
+    <li>php artisan migrate</li>
+    <li>php artisan tinker</li>
+    <li>\App\Models\Category::factory()->count(20)->create();</li>
+    <li>\App\Models\Post::factory()->count(10)->create();</li>
+    <li>CTRL + C</li>
+    <li>npm install</li>
+    <li>npm run dev</li>
+    <li>Enter http://localhost/</li>
+<ul>
